@@ -1,5 +1,7 @@
 # EKMAME
  
+ Initial commit version 0.221
+ 
  EKMAME는 한국어 버전만 있습니다. 물론 한글로 된 부분을 영문으로 변경하면 영어권에서도 사용할수 있을거라 생각합니다.
  
  EKMAME는 비공식 변종 마메입니다.
