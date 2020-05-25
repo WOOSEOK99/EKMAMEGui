@@ -90,36 +90,10 @@ ROM_START( kof94r )
 	ROM_LOAD16_BYTE( "055-c8.bin", 0xc00001, 0x200000, CRC(fe0a235d) SHA1(a45c66836e4e3c77dfef9d4c6cc422cb59169149) ) /* Plane 2,3 */
 ROM_END
 
-ROM_START( kof94ey )
-	ROM_REGION( 0x200000, "cslot1:maincpu", ROMREGION_BE|ROMREGION_16BIT )
-	ROM_LOAD16_WORD_SWAP( "055ey-p1.bin", 0x100000, 0x100000, CRC(4bdcea96) )
-	ROM_CONTINUE(						0x000000, 0x100000 )
-
-	NEO_SFIX_128K( "055-s1.bin", CRC(825976c1) SHA1(cb6a70bdd95d449d25196ca269b621c362db6743) )
-
-	NEO_BIOS_AUDIO_128K( "055-m1.bin", CRC(f6e77cf5) SHA1(292a3e3a4918ffe72bd1c41acb927b91844e035e) )
-
-	ROM_REGION( 0x600000, "cslot1:ymsnd", 0 )
-	ROM_LOAD( "055-v1.bin", 0x000000, 0x200000, CRC(8889596d) SHA1(c9ce713b720511438dbd3fe3bcc7c246f475c6a2) )
-	ROM_LOAD( "055-v2.bin", 0x200000, 0x200000, CRC(25022b27) SHA1(2b040a831c3c92ac6e4719de38009a0d55b64f6b) )
-	ROM_LOAD( "055-v3.bin", 0x400000, 0x200000, CRC(83cf32c0) SHA1(34a31a37eb10945b5169e96321bcea06eec33a00) )
-
-	
-
-	ROM_REGION( 0x1000000, "cslot1:sprites", 0 )
-	ROM_LOAD16_BYTE( "055-c1.bin", 0x000000, 0x200000, CRC(b96ef460) SHA1(e52f5303c17b50ce165c008be2837336369c110b) ) /* Plane 0,1 */
-	ROM_LOAD16_BYTE( "055-c2.bin", 0x000001, 0x200000, CRC(15e096a7) SHA1(237c2a3d059de00bfca66e0016ed325d7a32bfec) ) /* Plane 2,3 */
-	ROM_LOAD16_BYTE( "055-c3.bin", 0x400000, 0x200000, CRC(54f66254) SHA1(c594384bcd8b03beb8c595591505fecc44b185ac) ) /* Plane 0,1 */
-	ROM_LOAD16_BYTE( "055-c4.bin", 0x400001, 0x200000, CRC(0b01765f) SHA1(ec1fdcc944611408367bf5023d4ebe7edd9dfa88) ) /* Plane 2,3 */
-	ROM_LOAD16_BYTE( "055-c5.bin", 0x800000, 0x200000, CRC(ee759363) SHA1(8a5621c1b1f8267b9b9b6a14ab4944de542e1945) ) /* Plane 0,1 */
-	ROM_LOAD16_BYTE( "055-c6.bin", 0x800001, 0x200000, CRC(498da52c) SHA1(1e6e6202ee053a5261db889177ce3a087e078bda) ) /* Plane 2,3 */
-	ROM_LOAD16_BYTE( "055-c7.bin", 0xc00000, 0x200000, CRC(62f66888) SHA1(ac91a0eab0753bee175ad40213a4ae5d38ed5b87) ) /* Plane 0,1 */
-	ROM_LOAD16_BYTE( "055-c8.bin", 0xc00001, 0x200000, CRC(fe0a235d) SHA1(a45c66836e4e3c77dfef9d4c6cc422cb59169149) ) /* Plane 2,3 */
-ROM_END
 
 // GAME( 1994, kof94eh1, kof94,    neo_ek, 	neo_ek, mvs_led_state,          empty_init, ROT0, "hack", "The King of Fighters '94 (Can choose Rugal - ultra power hack ABC)" , MACHINE_SUPPORTS_SAVE)
 // GAME( 1994, kof94eho, kof94,    neo_ek, 	neo_ek, mvs_led_state,          empty_init, ROT0, "hack", "The King of Fighters '94 (Can choose Rugal - power hack ABC)" , MACHINE_SUPPORTS_SAVE)
-GAME( 1994, kof94ey,  kof94,    neo_ek, 	neo_ek, mvs_led_state,          empty_init, ROT0, "hack", "The King of Fighters '94 (Command Patch)" , MACHINE_SUPPORTS_SAVE)
+// GAME( 1994, kof94ey,  kof94,    neo_ek, 	neo_ek, mvs_led_state,          empty_init, ROT0, "hack", "The King of Fighters '94 (Command Patch)" , MACHINE_SUPPORTS_SAVE)
 GAME( 1994, kof94r,   kof94,    neo_ek, 	neo_ek, mvs_led_state,          empty_init, ROT0, "hack", "The King of Fighters '94 (REMIX ULTRA)" , MACHINE_SUPPORTS_SAVE)
 
 
@@ -226,30 +200,6 @@ ROM_START( kof94kh )
 	ROM_LOAD16_BYTE( "055.c8", 0xc00001, 0x200000, CRC(fe0a235d) SHA1(a45c66836e4e3c77dfef9d4c6cc422cb59169149) )
 ROM_END
 #endif
-ROM_START( kof94qaq )
-	ROM_REGION( 0x200000, "cslot1:maincpu", ROMREGION_BE|ROMREGION_16BIT )
-	ROM_LOAD16_WORD_SWAP( "055qaq.p1", 0x100000, 0x100000, CRC(c3dbc23e) SHA1(91cfd1e95df87ce2cff213bc4a0c846231c3cebd) )
-	ROM_CONTINUE( 0x000000, 0x100000 )
-
-	NEO_SFIX_128K( "055.s1", CRC(825976c1) SHA1(cb6a70bdd95d449d25196ca269b621c362db6743) )
-
-	NEO_BIOS_AUDIO_128K( "055.m1", CRC(f6e77cf5) SHA1(292a3e3a4918ffe72bd1c41acb927b91844e035e) )
-
-	ROM_REGION( 0x600000, "cslot1:ymsnd", 0 )
-	ROM_LOAD( "055.v1", 0x000000, 0x200000, CRC(8889596d) SHA1(c9ce713b720511438dbd3fe3bcc7c246f475c6a2) )
-	ROM_LOAD( "055.v2", 0x200000, 0x200000, CRC(25022b27) SHA1(2b040a831c3c92ac6e4719de38009a0d55b64f6b) )
-	ROM_LOAD( "055.v3", 0x400000, 0x200000, CRC(83cf32c0) SHA1(34a31a37eb10945b5169e96321bcea06eec33a00) )
-
-	ROM_REGION( 0x1000000, "cslot1:sprites", 0 )
-	ROM_LOAD16_BYTE( "055.c1", 0x000000, 0x200000, CRC(b96ef460) SHA1(e52f5303c17b50ce165c008be2837336369c110b) )
-	ROM_LOAD16_BYTE( "055.c2", 0x000001, 0x200000, CRC(15e096a7) SHA1(237c2a3d059de00bfca66e0016ed325d7a32bfec) )
-	ROM_LOAD16_BYTE( "055.c3", 0x400000, 0x200000, CRC(54f66254) SHA1(c594384bcd8b03beb8c595591505fecc44b185ac) )
-	ROM_LOAD16_BYTE( "055.c4", 0x400001, 0x200000, CRC(0b01765f) SHA1(ec1fdcc944611408367bf5023d4ebe7edd9dfa88) )
-	ROM_LOAD16_BYTE( "055.c5", 0x800000, 0x200000, CRC(ee759363) SHA1(8a5621c1b1f8267b9b9b6a14ab4944de542e1945) )
-	ROM_LOAD16_BYTE( "055.c6", 0x800001, 0x200000, CRC(498da52c) SHA1(1e6e6202ee053a5261db889177ce3a087e078bda) )
-	ROM_LOAD16_BYTE( "055.c7", 0xc00000, 0x200000, CRC(62f66888) SHA1(ac91a0eab0753bee175ad40213a4ae5d38ed5b87) )
-	ROM_LOAD16_BYTE( "055.c8", 0xc00001, 0x200000, CRC(fe0a235d) SHA1(a45c66836e4e3c77dfef9d4c6cc422cb59169149) )
-ROM_END
 
 ROM_START( kof94seh ) /* The King of Fighters '94 - Super Enhance Hack by Creamymami and Ydmis - (Can choose Rugal - ultra power hack ABC) */
 	ROM_REGION( 0x200000, "cslot1:maincpu", ROMREGION_BE|ROMREGION_16BIT )
@@ -329,20 +279,9 @@ ROM_END
 
 
 
-// GAME( 200?, kof94b,    kof94,    neo_ek, 	neo_ek, mvs_led_state,          empty_init,    ROT0, "Ydmis", "Kof'94 (Enable Hidden Characters)(NGM-055)(NGH-055)", MACHINE_SUPPORTS_SAVE )
-// GAME( 200?, kof94bc,   kof94,    neo_ek, 	neo_ek, mvs_led_state,          empty_init,    ROT0, "hack", "Kof'94 (Boss Colour Remix)(NGM-055)(NGH-055)", MACHINE_SUPPORTS_SAVE )
 GAME( 200?, kof94blk,  kof94,    neo_ek, 	neo_ek, mvs_led_state,          empty_init,    ROT0, "IsmaMj", "Kof'94 (Boss Fix Black Xtreme 0.8)(NGM-055)(NGH-055)", MACHINE_SUPPORTS_SAVE )
-// GAME( 2006, kof94br,   kof94,    neo_ek, 	neo_ek, mvs_led_state,          empty_init,    ROT0, "Neogeo BR team/KyoX", "Kof'94 (Portuguese Edition)(NGM-055)(NGH-055)", MACHINE_SUPPORTS_SAVE )
-// GAME( 200?, kof94cg,   kof94,    neo_ek, 	neo_ek, mvs_led_state,          empty_init,    ROT0, "Kawada7278", "Kof'94 (Color Modification)(NGM-055)(NGH-055)", MACHINE_SUPPORTS_SAVE )
-// GAME( 200?, kof94cn,   kof94,    neo_ek, 	neo_ek, mvs_led_state,          empty_init,    ROT0, "hack", "Kof'94 (Chinese Version)(NGM-055)(NGH-055)", MACHINE_SUPPORTS_SAVE )
 GAME( 200?, kof94cyk,  kof94,    neo_ek, 	neo_ek, mvs_led_state,          empty_init,    ROT0, "Yumeji & Kawada7278", "Kof'94 (Hack Boss and Color)(NGM-055)(NGH-055)", MACHINE_SUPPORTS_SAVE )
-// GAME( 200?, kof94eh,   kof94,    neo_ek, 	neo_ek, mvs_led_state,          empty_init,    ROT0, "Ydmis", "Kof'94 (Add Char - Pow hack ABC)(NGM-055)(NGH-055)", MACHINE_SUPPORTS_SAVE )
-// GAME( 200?, kof94h,    kof94,    neo_ek, 	neo_ek, mvs_led_state,          empty_init,    ROT0, "Jason", "Kof'94 (Remix Ultra)(Alt ?)(NGM-055)(NGH-055)", MACHINE_SUPPORTS_SAVE )
 GAME( 200?, kof94k,    kof94,    neo_ek, 	neo_ek, mvs_led_state,          empty_init,    ROT0, "hack", "Kof'94 (Korean Edition)(NGM-055)(NGH-055)", MACHINE_SUPPORTS_SAVE )
-GAME( 200?, kof94qaq,  kof94,    neo_ek, 	neo_ek, mvs_led_state,          empty_init,    ROT0, "Xuyongsheng90", "Kof'94 (Power Enhanced)(NGM-055)(NGH-055)", MACHINE_SUPPORTS_SAVE )
-// GAME( 200?, kof94ru,   kof94,    neo_ek, 	neo_ek, mvs_led_state,          empty_init,    ROT0, "Jason/K3", "Kof'94 (Remix Ultra 1.0)(NGM-055)(NGH-055)", MACHINE_SUPPORTS_SAVE )
-// GAME( 200?, kof94ruj,  kof94,    neo_ek, 	neo_ek, mvs_led_state,          empty_init,    ROT0, "Jason/K3", "Kof'94 (Remix Ultra 1.1)(NGM-055)(NGH-055)", MACHINE_SUPPORTS_SAVE )
-// GAME( 200?, kof94rz,   kof94,    neo_ek, 	neo_ek, mvs_led_state,          empty_init,    ROT0, "ZKW", "Kof'94 (Hack Boss Remixed)(NGM-055)(NGH-055)", MACHINE_SUPPORTS_SAVE )
 GAME( 200?, kof94seh,  kof94,    neo_ek, 	neo_ek, mvs_led_state,          empty_init,    ROT0, "Creamymami and Ydmis", "Kof'94 (Add Char - Ultra pow hack ABC)(NGM-055)(NGH-055)", MACHINE_SUPPORTS_SAVE ) // Rugal
 GAME( 200?, kof94sri,  kof94,    neo_ek, 	neo_ek, mvs_led_state,          empty_init,    ROT0, "IsmaMj", "Kof'94 (Super Ultra Remixed)(NGM-055)(NGH-055)", MACHINE_SUPPORTS_SAVE )
 GAME( 200?, kof94y,    kof94,    neo_ek, 	neo_ek, mvs_led_state,          empty_init,    ROT0, "Ydmis", "Kof'94 (Hidden Characters-Fix Boss's error)(NGM-055)(NGH-055)", MACHINE_SUPPORTS_SAVE )
@@ -508,31 +447,6 @@ ROM_START( kof94s07 )
 	ROM_LOAD16_BYTE( "055.c8", 0xc00001, 0x200000, CRC(fe0a235d) SHA1(a45c66836e4e3c77dfef9d4c6cc422cb59169149) )
 ROM_END
 
-ROM_START( kof94s10 )
-	ROM_REGION( 0x200000, "cslot1:maincpu", ROMREGION_BE|ROMREGION_16BIT )
-	ROM_LOAD16_WORD_SWAP( "055s10.p1", 0x100000, 0x100000, CRC(595dae77) SHA1(06e27c80f7a86ee236d33ebdf1524953b69fce66) )
-	ROM_CONTINUE( 0x000000, 0x100000 )
-
-	NEO_SFIX_128K( "055.s1", CRC(825976c1) SHA1(cb6a70bdd95d449d25196ca269b621c362db6743) )
-
-	NEO_BIOS_AUDIO_128K( "055.m1", CRC(f6e77cf5) SHA1(292a3e3a4918ffe72bd1c41acb927b91844e035e) )
-
-	ROM_REGION( 0x600000, "cslot1:ymsnd", 0 )
-	ROM_LOAD( "055.v1", 0x000000, 0x200000, CRC(8889596d) SHA1(c9ce713b720511438dbd3fe3bcc7c246f475c6a2) )
-	ROM_LOAD( "055.v2", 0x200000, 0x200000, CRC(25022b27) SHA1(2b040a831c3c92ac6e4719de38009a0d55b64f6b) )
-	ROM_LOAD( "055.v3", 0x400000, 0x200000, CRC(83cf32c0) SHA1(34a31a37eb10945b5169e96321bcea06eec33a00) )
-
-	ROM_REGION( 0x1000000, "cslot1:sprites", 0 )
-	ROM_LOAD16_BYTE( "055.c1", 0x000000, 0x200000, CRC(b96ef460) SHA1(e52f5303c17b50ce165c008be2837336369c110b) )
-	ROM_LOAD16_BYTE( "055.c2", 0x000001, 0x200000, CRC(15e096a7) SHA1(237c2a3d059de00bfca66e0016ed325d7a32bfec) )
-	ROM_LOAD16_BYTE( "055.c3", 0x400000, 0x200000, CRC(54f66254) SHA1(c594384bcd8b03beb8c595591505fecc44b185ac) )
-	ROM_LOAD16_BYTE( "055.c4", 0x400001, 0x200000, CRC(0b01765f) SHA1(ec1fdcc944611408367bf5023d4ebe7edd9dfa88) )
-	ROM_LOAD16_BYTE( "055.c5", 0x800000, 0x200000, CRC(ee759363) SHA1(8a5621c1b1f8267b9b9b6a14ab4944de542e1945) )
-	ROM_LOAD16_BYTE( "055.c6", 0x800001, 0x200000, CRC(498da52c) SHA1(1e6e6202ee053a5261db889177ce3a087e078bda) )
-	ROM_LOAD16_BYTE( "055.c7", 0xc00000, 0x200000, CRC(62f66888) SHA1(ac91a0eab0753bee175ad40213a4ae5d38ed5b87) )
-	ROM_LOAD16_BYTE( "055.c8", 0xc00001, 0x200000, CRC(fe0a235d) SHA1(a45c66836e4e3c77dfef9d4c6cc422cb59169149) )
-ROM_END
-
 ROM_START( kof94s11 )
 	ROM_REGION( 0x200000, "cslot1:maincpu", ROMREGION_BE|ROMREGION_16BIT )
 	ROM_LOAD16_WORD_SWAP( "055s11.p1", 0x100000, 0x100000, CRC(e1db3b0f) SHA1(fba85d0f8f4db9d81c3da516eeae87ad6dc72815) )
@@ -592,11 +506,5 @@ GAME( 200?, kof94s04, kof94, neo_ek, neo_ek, mvs_led_state, empty_init, ROT0, "C
 GAME( 200?, kof94s05, kof94, neo_ek, neo_ek, mvs_led_state, empty_init, ROT0, "hack",            "Kof'94 (Fix Boss's Error)(NGM-055)(NGH-055)", MACHINE_SUPPORTS_SAVE )
 GAME( 200?, kof94s06, kof94, neo_ek, neo_ek, mvs_led_state, empty_init, ROT0, "Creamymami",      "Kof'94 (Unlimit Special Moves)(NGM-055)(NGH-055)", MACHINE_SUPPORTS_SAVE )
 GAME( 200?, kof94s07, kof94, neo_ek, neo_ek, mvs_led_state, empty_init, ROT0, "yumeji",          "Kof'94 (Enable Hidden Characters V2)(NGM-055)(NGH-055)", MACHINE_SUPPORTS_SAVE )
-GAME( 200?, kof94s10, kof94, neo_ek, neo_ek, mvs_led_state, empty_init, ROT0, "Lichenzhao",      "Kof'94 (Super Kill Unified)(NGM-055)(NGH-055)", MACHINE_SUPPORTS_SAVE )
 GAME( 200?, kof94s11, kof94, neo_ek, neo_ek, mvs_led_state, empty_init, ROT0, "hack",            "Kof'94 (Move Simplified)(NGM-055)(NGH-055)", MACHINE_SUPPORTS_SAVE )
-// GAME( 2018, kof94s13, kof94, neo_ek, neo_ek, mvs_led_state, empty_init, ROT0, "Master Stiller",  "Kof'94 (Super Remix V2)(NGM-055)(NGH-055)", MACHINE_SUPPORTS_SAVE )
-// GAME( 2018, kof94s17, kof94, neo_ek, neo_ek, mvs_led_state, empty_init, ROT0, "Master Stiller",  "Kof'94 (Brazilian Edition Remix V3)(NGM-055)(NGH-055)", MACHINE_SUPPORTS_SAVE )
-// GAME( 2018, kof94s18, kof94, neo_ek, neo_ek, mvs_led_state, empty_init, ROT0, "Master Stiller",  "Kof'94 (New Remix 2018)(NGM-055)(NGH-055)", MACHINE_SUPPORTS_SAVE )
 GAME( 2018, kof94s20, kof94, neo_ek, neo_ek, mvs_led_state, empty_init, ROT0, "Master Stiller",  "Kof'94 (Rebout)(NGM-055)(NGH-055)", MACHINE_SUPPORTS_SAVE )
-// GAME( 201?, kof94s21, kof94, neo_ek, neo_ek, mvs_led_state, empty_init, ROT0, "IsmaMj",          "Kof'94 (Xtreme Black v0.8)(Alt)(NGM-055)(NGH-055)", MACHINE_SUPPORTS_SAVE )
-// GAME( 200?, kof94s24, kof94, neo_ek, neo_ek, mvs_led_state, empty_init, ROT0, "hack",            "Kof'94 (Boss version)(NGM-055)(NGH-055)", MACHINE_SUPPORTS_SAVE )

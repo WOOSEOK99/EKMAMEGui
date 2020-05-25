@@ -68,6 +68,7 @@ void neogeo_cart(device_slot_interface &device)
 	device.option_add_internal("sma_mslug3a", NEOGEO_SMA_MSLUG3A_CART);
 	// These use SMA for prg & CMC50 for gfx + audiocpu
 	device.option_add_internal("sma_kof2k",  NEOGEO_SMA_KOF2000_CART);
+	device.option_add_internal("sma_kof2k_ek",  NEOGEO_SMA_KOF2000_CART);//
 
 	device.option_add_internal("sma_kof2000d",  NEOGEO_SMA_KOF2000D_CART);	//USE_NEOGEO_HACK
 

@@ -651,6 +651,8 @@ public:
 	void neo_ek(machine_config &config);//EKMAME	
 	void neo_gsc_ek(machine_config &config);//EKMAME	
 	void neo_noslot_ek(machine_config &config);//EKMAME	
+	void neo304h_gsc(machine_config &config); //EKMAME
+	void kof2k_ek(machine_config &config);//EKMAME
 	void neobase_ek(machine_config &config);
 	void cmc42sfix_ek(machine_config &config);
 	void cmc50sfix_ek(machine_config &config);

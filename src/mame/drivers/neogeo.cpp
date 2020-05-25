@@ -1483,9 +1483,18 @@ void neogeo_base_state::set_slot_idx(int slot)
 			space.install_read_handler(0x2fe446, 0x2fe447, read16_delegate(*m_slots[m_curr_slot], FUNC(neogeo_cart_slot_device::protection_r)));
 			space.install_read_handler(0x2fffd8, 0x2fffd9, read16_delegate(*m_slots[m_curr_slot], FUNC(neogeo_cart_slot_device::addon_r)));
 			space.install_read_handler(0x2fffda, 0x2fffdb, read16_delegate(*m_slots[m_curr_slot], FUNC(neogeo_cart_slot_device::addon_r)));
-				space.install_read_port(0x300000, 0x300001, 0x01ff7e, "DSW");
-				space.install_read_port(0x340000, 0x340001, 0x01ff7e, "P2");
+				// space.install_read_port(0x300000, 0x300001, 0x01ff7e, "DSW");
+				// space.install_read_port(0x340000, 0x340001, 0x01ff7e, "P2");
 			break;
+		case NEOGEO_KOF2K_EK:
+			// addon_r here gives SMA random number
+			space.install_write_handler(0x2fffec, 0x2fffed, write16_delegate(*this, FUNC(neogeo_base_state::write_bankprot)));
+			space.install_read_handler(0x2fe446, 0x2fe447, read16_delegate(*m_slots[m_curr_slot], FUNC(neogeo_cart_slot_device::protection_r)));
+			space.install_read_handler(0x2fffd8, 0x2fffd9, read16_delegate(*m_slots[m_curr_slot], FUNC(neogeo_cart_slot_device::addon_r)));
+			space.install_read_handler(0x2fffda, 0x2fffdb, read16_delegate(*m_slots[m_curr_slot], FUNC(neogeo_cart_slot_device::addon_r)));
+				 space.install_read_port(0x300000, 0x300001, 0x01ff7e, "DSW");
+				 space.install_read_port(0x340000, 0x340001, 0x01ff7e, "P2");
+			break;			
 		case NEOGEO_MSLUG5:
 		case NEOGEO_SVC:
 		case NEOGEO_KOF2K3:
@@ -2666,10 +2675,7 @@ void mvs_state::kizuna4p(machine_config &config)
 
 void mvs_led_state::kof97oro(machine_config &config)
 {
-	mv1_fixed(config);
-	config.device_remove("edge");
-	config.device_remove("ctrl1");
-	config.device_remove("ctrl2");		
+	mv1_fixed(config);	
 	cartslot_fixed(config, "boot_kof97oro");
 	m_screen->set_visarea(38, 342-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);
 }
@@ -2809,12 +2815,19 @@ void mvs_led_state::ms6s16(machine_config &config)
 	m_screen->set_visarea(38, 342-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);
 }
 
-void mvs_led_state::kof2000(machine_config &config)
+void mvs_led_state::kof2k_ek(machine_config &config)
 {
 	mv1_fixed(config);
 	config.device_remove("edge");
 	config.device_remove("ctrl1");
 	config.device_remove("ctrl2");		
+	cartslot_fixed(config, "sma_kof2k_ek");
+	m_screen->set_visarea(38, 342-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);
+}
+
+void mvs_led_state::kof2000(machine_config &config)
+{
+	mv1_fixed(config);	
 	cartslot_fixed(config, "sma_kof2k");
 	m_screen->set_visarea(38, 342-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);
 }
@@ -3315,6 +3328,13 @@ void mvs_led_state::neo_gsc_ek(machine_config &config)
 	config.device_remove("ctrl1");
 	config.device_remove("ctrl2");
 	cartslot_fixed(config, "rom_ek");
+	m_screen->set_visarea(38, 342-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);
+}
+
+void mvs_led_state::neo304h_gsc(machine_config &config)
+{
+	mv1_gsc_fixed(config);
+	cartslot_fixed(config, "rom");
 	m_screen->set_visarea(38, 342-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);
 }
 
@@ -12636,7 +12656,7 @@ GAME( 2002, kf2k2mp2,   kof2002,  kf2k2mp2,  	neo_ek,    mvs_led_state, empty_in
 GAME( 2002, kof10th,    kof2002,  kof10th,   	neo_ek,    mvs_led_state, empty_init, ROT0, "bootleg", "The King of Fighters 10th Anniversary (The King of Fighters 2002 bootleg)", MACHINE_SUPPORTS_SAVE ) // fake SNK copyright
 GAME( 2005, kf10thep,   kof2002,  kf10thep,  	neogeo,    mvs_led_state, empty_init, ROT0, "bootleg", "The King of Fighters 10th Anniversary Extra Plus (The King of Fighters 2002 bootleg)", MACHINE_SUPPORTS_SAVE ) // fake SNK copyright
 GAME( 2004, kf2k5uni,   kof2002,  kf2k5uni,  	neo_ek,    mvs_led_state, empty_init, ROT0, "bootleg", "The King of Fighters 10th Anniversary 2005 Unique (The King of Fighters 2002 bootleg)", MACHINE_SUPPORTS_SAVE ) // fake SNK copyright
-GAME( 2004, kof2k4se,   kof2002,  kof2k4se,  	neo_ek,    mvs_led_state, empty_init, ROT0, "bootleg", "The King of Fighters Special Edition 2004 (The King of Fighters 2002 bootleg)", MACHINE_SUPPORTS_SAVE ) /* Hack / Bootleg of kof2002 */
+GAME( 2004, kof2k4se,   neogeo,  kof2k4se,  	neo_ek,    mvs_led_state, empty_init, ROT0, "bootleg", "The King of Fighters Special Edition 2004 (The King of Fighters 2002 bootleg)", MACHINE_SUPPORTS_SAVE ) /* Hack / Bootleg of kof2002 */
 GAME( 2003, mslug5,     neogeo,   mslug5,    	neo_mslug,    mvs_led_state, empty_init, ROT0, "SNK Playmore", "Metal Slug 5 (NGM-2680)", MACHINE_SUPPORTS_SAVE )
 GAME( 2003, mslug5h,    mslug5,   mslug5,    	neo_mslug,    mvs_led_state, empty_init, ROT0, "SNK Playmore", "Metal Slug 5 (NGH-2680)", MACHINE_SUPPORTS_SAVE ) /* Also found in later MVS carts */
 GAME( 2003, ms5plus,    mslug5,   ms5plus,   	neo_mslug,    mvs_led_state, empty_init, ROT0, "bootleg", "Metal Slug 5 Plus (bootleg)", MACHINE_SUPPORTS_SAVE )
