@@ -65,36 +65,6 @@ INPUT_PORTS_END
 /***********************************************************************************************************************
  THE KING OF THE FIGHTER 2001
 *************************************************************************************************************************/
-
-ROM_START( kof2k1 )
-	ROM_REGION( 0x500000, "cslot1:maincpu", ROMREGION_BE|ROMREGION_16BIT )
-	ROM_LOAD16_WORD_SWAP( "262-p1d.bin", 0x000000, 0x100000, CRC(2af7e741 ))
-	ROM_LOAD16_WORD_SWAP( "262-p2.bin", 0x100000, 0x400000, CRC(91EEA062 ))
-	
-	NEO_SFIX_128K( "262-s1.bin", CRC(6d209796 ))
-
-  NEO_BIOS_AUDIO_128K( "262-m1d.bin",   CRC(2fb0a8a5) SHA1(9878370ff8cef3e9c9f307ad64c29522dd625c8f) )
-
-	ROM_REGION( 0x1000000, "cslot1:ymsnd", 0 )
-	ROM_LOAD( "262-v1.bin", 0x000000, 0x400000, CRC(83d49ecf ))
-	ROM_LOAD( "262-v2.bin", 0x400000, 0x400000, CRC(003f1843 ))
-	ROM_LOAD( "262-v3.bin", 0x800000, 0x400000, CRC(2ae38dbe ))
-	ROM_LOAD( "262-v4.bin", 0xc00000, 0x400000, CRC(26ec4dd9 ))
-
-	
-
-	ROM_REGION( 0x4000000, "cslot1:sprites", 0 )
-	ROM_LOAD16_BYTE( "262-c1d.bin", 0x0000000, 0x800000, CRC(103225b1 )) /* Plane 0,1 */
-	ROM_LOAD16_BYTE( "262-c2d.bin", 0x0000001, 0x800000, CRC(f9d05d99 ) )/* Plane 2,3 */
-	ROM_LOAD16_BYTE( "262-c3d.bin", 0x1000000, 0x800000, CRC(4c7ec427 )) /* Plane 0,1 */
-	ROM_LOAD16_BYTE( "262-c4d.bin", 0x1000001, 0x800000, CRC(1d237aa6 )) /* Plane 2,3 */
-	ROM_LOAD16_BYTE( "262-c5d.bin", 0x2000000, 0x800000, CRC(c2256db5 ) )/* Plane 0,1 */
-	ROM_LOAD16_BYTE( "262-c6d.bin", 0x2000001, 0x800000, CRC(8d6565a9 ) )/* Plane 2,3 */
-	ROM_LOAD16_BYTE( "262-c7d.bin", 0x3000000, 0x800000, CRC(d1408776 )) /* Plane 0,1 */
-	ROM_LOAD16_BYTE( "262-c8d.bin", 0x3000001, 0x800000, CRC(954d0e16 )) /* Plane 2,3 */
-ROM_END
-
-
 ROM_START( kof2k1ehcd )
 	ROM_REGION( 0x500000, "cslot1:maincpu", ROMREGION_BE|ROMREGION_16BIT )
 	ROM_LOAD16_WORD_SWAP( "262ehc-p1.bin", 0x000000, 0x100000, CRC(1ebb4962 ))
@@ -269,7 +239,6 @@ ROM_START( kof2k1ib )
 	ROM_LOAD16_BYTE( "262-c8d.bin", 0x3000001, 0x800000, CRC(954d0e16 )) /* Plane 2,3 */
 ROM_END
 
-GAME( 2001, kof2k1,   kof2001,   neobase_ek, 	neo_ek, mvs_led_state,          empty_init, ROT0, "hack", "The King of Fighters 2001 (Fully Decrypted)" , MACHINE_SUPPORTS_SAVE)
 GAME( 2001, kof2k1ehcd,kof2001,   neobase_ek, 	neo_ek, mvs_led_state,          empty_init, ROT0, "hack", "The King of Fighters 2001 (Bases on kof2001h - ultra kill start is max - ultra power hack)", MACHINE_SUPPORTS_SAVE)
 GAME( 2001, kof2k1ig, kof2001,   neobase_ek, 	neo_ek, mvs_led_state,          empty_init, ROT0, "hack", "The King of Fighters 2001 (Remix pro - igniz 24a & Mai Wind-Knife & Can choose Zero and Igniz)", MACHINE_SUPPORTS_SAVE)
 GAME( 2001, kof2k1mai,kof2001,   neobase_ek, 	neo_ek, mvs_led_state,          empty_init, ROT0, "hack", "The King of Fighters 2001 (Remix pro - Terry ice-arrow & Mai Wind-Knife & Can choose Zero and Igniz)", MACHINE_SUPPORTS_SAVE)
@@ -279,32 +248,6 @@ GAME( 2001, kof2k1ib, kof2001,   neobase_ek, 	neo_ek, mvs_led_state,          em
 
 // license:BSD-3-Clause
 // copyright-holders:Robbbert
-ROM_START( kof2k1bh1 )
-	ROM_REGION( 0x500000, "cslot1:maincpu", ROMREGION_BE|ROMREGION_16BIT )
-	ROM_LOAD16_WORD_SWAP( "262bh.p1", 0x000000, 0x100000, CRC(f91b5329) SHA1(9b5375090072e5ea8b97bf4ebb55787476ff964d) )
-	ROM_LOAD16_WORD_SWAP( "262h.p2", 0x100000, 0x400000, CRC(91eea062) SHA1 (82bae42bbeedb9f3aa0c7c0b0a7a69be499cf98f) )
-
-	NEO_SFIX_128K( "262bh.s1", CRC(e600c595) SHA1(7133d879bff4854bead500c0928e0f1d918b7bed) )
-
-	NEO_BIOS_AUDIO_256K( "262n.m1", CRC(4bcc537b) SHA1(9fcf1342bcd53d5eec12c46ee41a51bf543256c2) )
-
-	ROM_REGION( 0x1000000, "cslot1:ymsnd", 0 )
-	ROM_LOAD( "262.v1", 0x000000, 0x400000, CRC(83d49ecf) SHA1(2f2c116e45397652e77fcf5d951fa5f71b639572) )
-	ROM_LOAD( "262.v2", 0x400000, 0x400000, CRC(003f1843) SHA1(bdd58837ad542548bd4053c262f558af88e3b989) )
-	ROM_LOAD( "262.v3", 0x800000, 0x400000, CRC(2ae38dbe) SHA1(4e82b7dd3b899d61907620517a5a27bdaba0725d) )
-	ROM_LOAD( "262.v4", 0xc00000, 0x400000, CRC(26ec4dd9) SHA1(8bd68d95a2d913be41a51f51e48dbe3bff5924fb) )
-
-	ROM_REGION( 0x4000000, "cslot1:sprites", 0 )
-	ROM_LOAD16_BYTE( "262bs2.c1", 0x0000000, 0x800000, CRC(634c374d) SHA1(d43086ef6e86ef39b2f9afda2aba47d17c55d943) ) /* Plane 0,1 */
-	ROM_LOAD16_BYTE( "262bs2.c2", 0x0000001, 0x800000, CRC(6b9534f9) SHA1(c52ab7a2ec7df788b03e5f5ff1e906e2d6512da7) ) /* Plane 2,3 */
-	ROM_LOAD16_BYTE( "262bs2.c3", 0x1000000, 0x800000, CRC(21d114db) SHA1(53789fae6cb07b7961f126e88fd2c97998885cd4) ) /* Plane 0,1 */
-	ROM_LOAD16_BYTE( "262bs2.c4", 0x1000001, 0x800000, CRC(7f4678f2) SHA1(3f36bbbe63cac787b551992e1e7f10e7ba8abe8d) ) /* Plane 2,3 */
-	ROM_LOAD16_BYTE( "262bs2.c5", 0x2000000, 0x800000, CRC(fe98132f) SHA1(1e21f3473d4786c44dcaa0018ad446ab50a86a3a) ) /* Plane 0,1 */
-	ROM_LOAD16_BYTE( "262bs2.c6", 0x2000001, 0x800000, CRC(91e3ed85) SHA1(14a72d05a8496826beb9e3b0e373c0038bd1d8e5) ) /* Plane 2,3 */
-	ROM_LOAD16_BYTE( "262bs2.c7", 0x3000000, 0x800000, CRC(e451915c) SHA1(9b4b2718e8ecf33c421a5b5363e7ff622bc3f4f2) ) /* Plane 0,1 */
-	ROM_LOAD16_BYTE( "262bs2.c8", 0x3000001, 0x800000, CRC(831943ba) SHA1(ae7c79d28edaaaf3f792a8317cceb4ad9264b2d1) ) /* Plane 2,3 */
-ROM_END
-
 ROM_START( kof2k1ehr ) /* The King of Fighters 2001 - Remix by Raymonose - (Bases on kof2001h - ultra kill start is max - ultra power hack - character move change) */
 	ROM_REGION( 0x500000, "cslot1:maincpu", ROMREGION_BE|ROMREGION_16BIT )
 	ROM_LOAD16_WORD_SWAP( "262ehr.p1", 0x000000, 0x100000, CRC(afabe438) SHA1(3245650382a9f36cde7b66fe247bdd68b1adf30c) )
@@ -489,7 +432,6 @@ ROM_START( kof2k1wh ) /* The King of Fighters 2001 - Remix by Wesker - (Characte
 	ROM_LOAD16_BYTE( "262-c8d.bin", 0x3000001, 0x800000, CRC(954d0e16 )) /* Plane 2,3 */
 ROM_END
 
-GAME( 2001, kof2k1bh1,  kof2001,  cmc50sfix_ek, 	neo_ek, mvs_led_state,          empty_init, ROT0, "Dodowang", "Kof2001 (Enable Hidden Characters v2)", MACHINE_SUPPORTS_SAVE )
 GAME( 2001, kof2k1ehr,  kof2001,  neobase_ek, 	neo_ek, mvs_led_state,          empty_init, ROT0, "Raymonose", "Kof2001 (Ultra kill start max - Ultra pow - Diff Moves)", MACHINE_SUPPORTS_SAVE )
 GAME( 2001, kof2k1ki,   kof2001,  neobase_ek, 	neo_ek, mvs_led_state,      empty_init, ROT0, "Kalce", "Kof2001 Plus (Special ST V0.5)", MACHINE_SUPPORTS_SAVE )
 GAME( 2002, kof2k1pls,  kof2001,  neobase_ek, 	neo_ek, mvs_led_state,          empty_init, ROT0, "bootleg", "Kof2001 Plus (Set 1, bootleg / hack)", MACHINE_SUPPORTS_SAVE ) //Plus Plus + Resurgence plus 3 Simplified BOSS

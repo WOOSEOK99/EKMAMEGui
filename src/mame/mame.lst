@@ -42549,19 +42549,10 @@ wh2s05
 
 // SNK vs CAPCOM
 //@source : neo_svc
-svcg  
 svcplusa2016
-svcrm 
 svchs06
-svchs10
-svcboots01
-svcboots03
 svcboots16
-svcpluss07
 svcplusas06
-svcplusas08
-svcplusas09
-svcplusas12
 
 //@source:neo_sengoku.cpp
 sengokucd 
@@ -42729,12 +42720,6 @@ matrimb
 pimehc
 pimehh
 
-svcn
-svcndh
-svcjoy
-svcru
-svcm2
-svccpjb
 
 // kof94
 kof94r
@@ -42786,7 +42771,6 @@ kof96s39
 
 // kof97 
 kof97cy1
-kof97b  
 kof97ath
 kof97at 
 kof97f  
@@ -42795,7 +42779,6 @@ kof97yk4
 kof97ae1 
 kof97aot 
 kof97bh  
-kof97chl2
 kof97cy  
 kof97eh2 
 kof97frb 
@@ -42815,7 +42798,6 @@ kof97yk1
 kof97yk2 
 kof97yk85
 kof97yl2 
-kof97yo  
 kof97s02
 kof97s04
 kof97s06
@@ -42839,7 +42821,6 @@ kof97s119
 kof97s121
 kof97s122
 kof97s126
-kof97s128
 kof97s134
 kof97s135
 kof97s140
@@ -42856,9 +42837,6 @@ kof97hx02
 kof97hx08
 kof97hx19
 kof97hx33
-kof97hx44
-kof97hx45
-kof97hx46
 kof97hx77
 kof97hx87
 kof97hx91
@@ -42873,17 +42851,9 @@ kof97hx105
 kof97hx106
 kof97hx130
 kof97hx138
-kof97hx152
-kof97hx164
-kof97hx166
-kof97hx168
-kof97hx169
-kof97hx170
 kof97hx172
 kof97hx191
-kof97hx216
 kof97hx218
-kof97hx219
 kof97hx226
 kof97hx230
 kof97hx237
@@ -42894,13 +42864,10 @@ kof97hx254
 kof97hx271
 kof97hx282
 kof97hx295
-kof97hx297
 kof97hx306
 
 // kof98
-kof98nd
 kof98ib 
-kof98chd 
 kof98jhd 
 kof98whd
 kof98wh2d
@@ -42920,9 +42887,7 @@ kof98jh
 kof98mev
 kof98mix
 kof98rh1
-kof98rm 
 kof98rsa
-kof98rup
 kof98seh
 kof98seho
 kof98sp2
@@ -42930,7 +42895,6 @@ kof98ul
 kof98urf
 kof98wh 
 kof98wh1
-kof98wh2
 kof98evox
 kof98s01
 kof98s03
@@ -42954,11 +42918,9 @@ kof98hh64
 kof98hh65
 kof98hh67
 kof98hh68
-kof98hh69
 kof98hh113
 kof98hh121
 kof98hh125
-kof98xz06
 kof98xz11
 
 // kof99
@@ -42973,20 +42935,13 @@ kof99hbi
 kof99ob 
 kof99ob2
 kof99sp 
-kof99sr 
 kof99the42
 kof99vor 
 kof99xxx 
 kf99rev2 
-kof99rs  
 kof99s01
 kof99s03
-kof99s04
 kof99s05
-kof99s06
-kof99s07
-kof99s09
-kof99s10
 kof99s15
 kof99s16
 kof99s17
@@ -43004,11 +42959,9 @@ kof99s100
 kof99s101
 
 //kof2000
-kof2k     
 kof2kyg1  
 kof2kev   
 kof2krp1  
-kof2kbh   
 kof2krm1  
 kof2kst1  
 kof2kwh1  
@@ -43018,24 +42971,20 @@ kof2kmai
 kof2000ev
 kof2kiori
 kof2kryu
-kof2000h
 kof2000s01  
 kof2000s06
 kof2000s15
 kof2000s16
 kof2000s36
-kof2000s45
 kof2000s59
 
 // kof2001
-kof2k1   
 kof2k1ehcd
 kof2k1ig 
 kof2k1mai
 kof2k1k3 
 kof2k1chd 
 kof2k1ib 
-kof2k1bh1
 kof2k1ehr
 kof2k1ki 
 kof2k1pls
@@ -43056,19 +43005,15 @@ kof2001s48
 
 
 // kof2k2
-kof2k2   
 kof2k2pjwd
 kof2002k 
 kof2k2srd
-kof2k2kyo
-kof2k2nest
 kf2k2mpd 
 kof200215   
 kof2002x   
 kof2k2bl4  
 kof2k2c2   
 kof2k2cori 
-kof2k2e3   
 kof2k2evo2 
 kof2k2ht   
 kof2k2ibp  
@@ -43196,10 +43141,7 @@ kf10thud
 kf10thuda	
 kof2k4mp
 kof2k4mp2
-kof2k4omg
 kof2k4ru
-kof2k4se1
-kof2k4seb
 kof2k4spl
 kof2k8uni
 kof10thd
@@ -43209,22 +43151,12 @@ kf2k5unis14
 kf2k5unis16
 kf2k5unis17
 kf2k5unis18
-kof2k4ses05
 kof2k4ses06
 kof2k4ses07
-kof2k4ses08
-kof2k4ses09
-kof2k4ses14
-kof2k4ses15
 kof2k4ses16
-kof2k4ses17
-kof2k4ses19
 kof2k4ses26
-kof2k4ses27
 kof2k4ses30
-kof2k4ses31
 kof2k4ses32
-kof2k4ses33
 kof2k4ses35
 kof2k4ses36
 

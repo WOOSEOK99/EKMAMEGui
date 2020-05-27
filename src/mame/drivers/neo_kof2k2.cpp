@@ -63,38 +63,6 @@ INPUT_PORTS_END
 /***********************************************************************************************************************
  THE KING OF THE FIGHTER 2002
 *************************************************************************************************************************/
-ROM_START( kof2k2 )
-	ROM_REGION( 0x500000, "cslot1:maincpu", ROMREGION_BE|ROMREGION_16BIT )
-	ROM_LOAD16_WORD_SWAP( "265-p1.bin", 0x000000, 0x100000, CRC(9ede7323 ))
-	ROM_LOAD16_WORD_SWAP( "265-p2d.bin", 0x100000, 0x400000, CRC(432fdf53 ))
-
-//	ROM_REGION( 0x20000, "fixed", 0 )
-//	ROM_LOAD( "265-s1.bin",0x000000, 0x20000, CRC(e0eaaba3) )
-//	ROM_REGION( 0x20000, "fixedbios", 0 )
-//	ROM_LOAD( "sfix.sfx",  0x000000, 0x20000, CRC(354029fc  ))
-
-	NEO_SFIX_128K( "265-s1.bin", CRC(e0eaaba3 ))
-	NEO_BIOS_AUDIO_128K( "265-m1d.bin", CRC(1c661a4b) ) 
-
-	ROM_REGION( 0x1000000, "cslot1:ymsnd", 0 )
-	ROM_LOAD( "265-v1d.bin", 0x000000, 0x400000, CRC(13d98607 ))
-	ROM_LOAD( "265-v2d.bin", 0x400000, 0x400000, CRC(9cf74677 ))
-	ROM_LOAD( "265-v3d.bin", 0x800000, 0x400000, CRC(8e9448b5 ))
-	ROM_LOAD( "265-v4d.bin", 0xc00000, 0x400000, CRC(067271b5 ))
-	
-
-	ROM_REGION( 0x4000000, "cslot1:sprites", 0 )
-	ROM_LOAD16_BYTE( "265-c1d.bin", 0x0000000, 0x800000, CRC(7EFA6EF7 ))
-	ROM_LOAD16_BYTE( "265-c2d.bin", 0x0000001, 0x800000, CRC(AA82948B ))
-	ROM_LOAD16_BYTE( "265-c3d.bin", 0x1000000, 0x800000, CRC(959FAD0B ))
-	ROM_LOAD16_BYTE( "265-c4d.bin", 0x1000001, 0x800000, CRC(efe6a468 ))
-	ROM_LOAD16_BYTE( "265-c5d.bin", 0x2000000, 0x800000, CRC(74BBA7C6 ))
-	ROM_LOAD16_BYTE( "265-c6d.bin", 0x2000001, 0x800000, CRC(E20D2216 ))
-	ROM_LOAD16_BYTE( "265-c7d.bin", 0x3000000, 0x800000, CRC(8A5B561C ))
-	ROM_LOAD16_BYTE( "265-c8d.bin", 0x3000001, 0x800000, CRC(BEF667A3 ))
-ROM_END
-
-
 ROM_START( kof2k2pjwd )
 	ROM_REGION( 0x500000, "cslot1:maincpu", ROMREGION_BE|ROMREGION_16BIT )
 	ROM_LOAD16_WORD_SWAP( "265pjw-p1.bin", 0x000000, 0x100000, CRC(a87c318e ))
@@ -293,82 +261,6 @@ ROM_START( kof2k2nd ) /* Original Version - Encrypted GFX */
 	ROM_LOAD16_BYTE( "265-c8d.bin", 0x3000001, 0x800000, CRC(BEF667A3 ))
 ROM_END 
 
-
-
-
-
-ROM_START( kof2k2kyo )
-	ROM_REGION( 0x500000, "cslot1:maincpu", ROMREGION_BE|ROMREGION_16BIT )
-	ROM_LOAD16_WORD_SWAP( "265kyo-p1.bin", 0x000000, 0x100000, CRC(c27c417d ))
-	ROM_LOAD16_WORD_SWAP( "265kyo-p2.bin", 0x100000, 0x400000, CRC(6ae3d483 ))
-
-	//	ROM_REGION( 0x20000, "fixed", 0 )
-	//	ROM_LOAD( "265-s1.bin",0x000000, 0x20000, CRC(e0eaaba3) )
-	//	ROM_REGION( 0x20000, "fixedbios", 0 )
-	//	ROM_LOAD( "sfix.sfx",  0x000000, 0x20000, CRC(354029fc	))
-	
-	NEO_SFIX_128K( "265-s1.bin", CRC(e0eaaba3 ))
-
-
-	NEO_BIOS_AUDIO_128K( "265-m1d.bin", CRC(1c661a4b) ) 
-
-	ROM_REGION( 0x1000000, "cslot1:ymsnd", 0 )
-	
-	/* decrypted */
-	ROM_LOAD( "265-v1d.bin", 0x000000, 0x400000, CRC(13d98607 ))
-	ROM_LOAD( "265-v2d.bin", 0x400000, 0x400000, CRC(9cf74677 ))
-	ROM_LOAD( "265-v3d.bin", 0x800000, 0x400000, CRC(8e9448b5 ))
-	ROM_LOAD( "265-v4d.bin", 0xc00000, 0x400000, CRC(067271b5 ))
-
-	
-
-	ROM_REGION( 0x4000000, "cslot1:sprites", 0 )
-	ROM_LOAD16_BYTE( "265-c1d.bin", 0x0000000, 0x800000, CRC(7EFA6EF7 ))
-	ROM_LOAD16_BYTE( "265-c2d.bin", 0x0000001, 0x800000, CRC(AA82948B ))
-	ROM_LOAD16_BYTE( "265-c3d.bin", 0x1000000, 0x800000, CRC(959FAD0B ))
-	ROM_LOAD16_BYTE( "265-c4d.bin", 0x1000001, 0x800000, CRC(efe6a468 ))
-	ROM_LOAD16_BYTE( "265-c5d.bin", 0x2000000, 0x800000, CRC(74BBA7C6 ))
-	ROM_LOAD16_BYTE( "265-c6d.bin", 0x2000001, 0x800000, CRC(E20D2216 ))
-	ROM_LOAD16_BYTE( "265-c7d.bin", 0x3000000, 0x800000, CRC(8A5B561C ))
-	ROM_LOAD16_BYTE( "265-c8d.bin", 0x3000001, 0x800000, CRC(BEF667A3 ))
-ROM_END
-
-ROM_START( kof2k2nest )
-	ROM_REGION( 0x500000, "cslot1:maincpu", ROMREGION_BE|ROMREGION_16BIT )
-	ROM_LOAD16_WORD_SWAP( "265nest-p1.bin", 0x000000, 0x100000, CRC(b84f672c ))
-	ROM_LOAD16_WORD_SWAP( "265-p2d.bin", 0x100000, 0x400000, CRC(432fdf53 ))
-
-	//	ROM_REGION( 0x20000, "fixed", 0 )
-	//	ROM_LOAD( "265-s1.bin",0x000000, 0x20000, CRC(e0eaaba3) )
-	//	ROM_REGION( 0x20000, "fixedbios", 0 )
-	//	ROM_LOAD( "sfix.sfx",  0x000000, 0x20000, CRC(354029fc	))
-	
-	NEO_SFIX_128K( "265-s1.bin", CRC(e0eaaba3 ))
-
-
-	NEO_BIOS_AUDIO_128K( "265-m1d.bin", CRC(1c661a4b) ) 
-
-	ROM_REGION( 0x1000000, "cslot1:ymsnd", 0 )
-	
-	/* decrypted */
-	ROM_LOAD( "265-v1d.bin", 0x000000, 0x400000, CRC(13d98607 ))
-	ROM_LOAD( "265-v2d.bin", 0x400000, 0x400000, CRC(9cf74677 ))
-	ROM_LOAD( "265-v3d.bin", 0x800000, 0x400000, CRC(8e9448b5 ))
-	ROM_LOAD( "265-v4d.bin", 0xc00000, 0x400000, CRC(067271b5 ))
-
-	
-
-	ROM_REGION( 0x4000000, "cslot1:sprites", 0 )
-	ROM_LOAD16_BYTE( "265-c1d.bin", 0x0000000, 0x800000, CRC(7EFA6EF7 ))
-	ROM_LOAD16_BYTE( "265-c2d.bin", 0x0000001, 0x800000, CRC(AA82948B ))
-	ROM_LOAD16_BYTE( "265-c3d.bin", 0x1000000, 0x800000, CRC(959FAD0B ))
-	ROM_LOAD16_BYTE( "265-c4d.bin", 0x1000001, 0x800000, CRC(efe6a468 ))
-	ROM_LOAD16_BYTE( "265-c5d.bin", 0x2000000, 0x800000, CRC(74BBA7C6 ))
-	ROM_LOAD16_BYTE( "265-c6d.bin", 0x2000001, 0x800000, CRC(E20D2216 ))
-	ROM_LOAD16_BYTE( "265-c7d.bin", 0x3000000, 0x800000, CRC(8A5B561C ))
-	ROM_LOAD16_BYTE( "265-c8d.bin", 0x3000001, 0x800000, CRC(BEF667A3 ))
-ROM_END
-
 ROM_START( kf2k2mp1 )
 	ROM_REGION( 0x800000, "cslot1:maincpu", ROMREGION_BE|ROMREGION_16BIT )
   	ROM_LOAD16_WORD_SWAP( "kf02m-p1.bin", 0x000000, 0x400000, CRC(ff7c6ec0) )
@@ -431,12 +323,9 @@ ROM_END
 
 
 
-GAME( 2002, kof2k2,    kof2002, neobase_ek, neo_ek, mvs_led_state, empty_init, ROT0,   "hack", "The King of Fighters 2002 (Fully Decrypted)" , MACHINE_SUPPORTS_SAVE) 
 GAME( 2002, kof2k2pjwd, kof2002, neobase_ek, neo_ek, mvs_led_state, empty_init, ROT0,   "hack", "The King of Fighters 2002 ('Plus' version by Jason/K3 and Wesker)" , MACHINE_SUPPORTS_SAVE)
 GAME( 2002, kof2002k,  kof2002, neobase_ek, neo_ek, mvs_led_state, empty_init, ROT0,   "hack", "The King of Fighters 2002 (Korean)", MACHINE_SUPPORTS_SAVE)
 GAME( 2002, kof2k2srd, kof2002, neobase_ek, 	neo_ek, mvs_led_state, empty_init, ROT0,   "hack", "The King of Fighters 2002 (Super Decrypted)" , MACHINE_SUPPORTS_SAVE)
-GAME( 2002, kof2k2kyo, kof2002, neobase_ek, 	neo_ek, mvs_led_state, empty_init, ROT0,   "hack", "The King of Fighters 2002 (Can select Rugal and Kusanagi & Changed move behaviour & Color remix)", MACHINE_SUPPORTS_SAVE)
-GAME( 2002, kof2k2nest,kof2002, neobase_ek, 	neo_ek, mvs_led_state, empty_init, ROT0,   "hack", "The King of Fighters 2002 (Can select Nest-TEAM or Kusanagi at Stage 5)" , MACHINE_SUPPORTS_SAVE)
 GAME( 2002, kf2k2mpd,  kof2002, neobase_ek, 	neo_ek, mvs_led_state, empty_init, ROT0,   "hack", "The King of Fighters 2002 Magic Plus (Decrypted)" , MACHINE_SUPPORTS_SAVE)
 
 // license:BSD-3-Clause
@@ -565,30 +454,6 @@ ROM_START( kof2k2cori )
 	ROM_LOAD16_BYTE( "265d.c6",   0x2000001, 0x800000, CRC(e20d2216) SHA1(5D28EEA7B581E780B78F391A8179F1678EE0D9A5) )
 	ROM_LOAD16_BYTE( "265ori.c7", 0x3000000, 0x800000, CRC(0E9F6ADB) SHA1(0e4cdbd3df2ef7b0c78c3275ee22684c67bf2d23) )
 	ROM_LOAD16_BYTE( "265ori.c8", 0x3000001, 0x800000, CRC(9961799E) SHA1(cf5d43bbd90269155ac41fe9a31328654784351f) )
-ROM_END
-
-ROM_START( kof2k2e3 ) /* The King of Fighters 2002 - Enhance by Creamymami - (Can choose Kusanagi and Rugal - ultra kill start is max) */
-	ROM_REGION( 0x500000, "cslot1:maincpu", ROMREGION_BE|ROMREGION_16BIT )
-	ROM_LOAD16_WORD_SWAP( "265e3.p1", 0x000000, 0x100000, CRC(7b560cdb) SHA1(6589a7e39d72bb87be62baa89f07a92bdaa6fc0a) )
-	ROM_LOAD16_WORD_SWAP( "265.p2", 0x100000, 0x400000, CRC(327266b8) SHA1(98f445cc0a94f8744d74bca71cb420277622b034) )
-
-	NEO_SFIX_MT_128K
-
-	NEO_BIOS_AUDIO_128K( "265d.m1", CRC(1c661a4b) SHA1(4e5aa862a0a182a806d538996ddc68d9f2dffaf7) )
-
-	ROM_REGION( 0x1000000, "cslot1:ymsnd", 0 )
-	ROM_LOAD( "265.v1", 0x000000, 0x800000, CRC(15e8f3f5) SHA1(7c9e6426b9fa6db0158baa17a6485ffce057d889) )
-	ROM_LOAD( "265.v2", 0x800000, 0x800000, CRC(da41d6f9) SHA1(a43021f1e58947dcbe3c8ca5283b20b649f0409d) )
-
-	ROM_REGION( 0x4000000, "cslot1:sprites", 0 )
-	ROM_LOAD16_BYTE( "265.c1", 0x0000000, 0x800000, CRC(2b65a656) SHA1(9c46d8cf5b1ef322db442ac6a9b9406ab49206c5) )
-	ROM_LOAD16_BYTE( "265.c2", 0x0000001, 0x800000, CRC(adf18983) SHA1(150cd4a5e51e9df88688469d2ea7675c2cf3658a) )
-	ROM_LOAD16_BYTE( "265.c3", 0x1000000, 0x800000, CRC(875e9fd7) SHA1(28f52d56192d48bbc5dc3c97abf456bd34a58cbd) )
-	ROM_LOAD16_BYTE( "265.c4", 0x1000001, 0x800000, CRC(2da13947) SHA1(f8d79ec2c236aa3d3648a4f715676899602122c1) )
-	ROM_LOAD16_BYTE( "265.c5", 0x2000000, 0x800000, CRC(61bd165d) SHA1(b3424db84bc683d858fb635bc42728f9cdd89caf) )
-	ROM_LOAD16_BYTE( "265.c6", 0x2000001, 0x800000, CRC(03fdd1eb) SHA1(6155c7e802062f4eafa27e414c4e73ee59b868bf) )
-	ROM_LOAD16_BYTE( "265.c7", 0x3000000, 0x800000, CRC(1a2749d8) SHA1(af7d9ec1d576209826fa568f676bbff92f6d6ddd) )
-	ROM_LOAD16_BYTE( "265.c8", 0x3000001, 0x800000, CRC(ab0bb549) SHA1(d23afb60b7f831f7d4a98ad3c4a00ee19877a1ce) )
 ROM_END
 
 ROM_START( kof2k2evo2 )
@@ -1268,7 +1133,6 @@ GAME( 2005, kof2002x,    kof2002, kof2002, 	    neo_ek, mvs_led_state, empty_ini
 GAME( 2011, kof2k2bl4,   kof2002, neobase_ek, 	neo_ek, mvs_led_state, empty_init,   ROT0, "Neo Nebuwaks/Ismamj", "Kof2002 (Blood S.Plus)(BL4)", MACHINE_SUPPORTS_SAVE )
 GAME( 2016, kof2k2c2,    kof2002, neobase_ek, 	neo_ek, mvs_led_state, empty_init,   ROT0, "EGCG / EGHT", "Kof2002 (3rd Strike of the Orochi 2016-01-04)", MACHINE_SUPPORTS_SAVE )
 GAME( 2010, kof2k2cori,  kof2002, neobase_ek, 	neo_ek, mvs_led_state, empty_init,   ROT0, "Ismamj / EGCG / EGHT", "Kof2002 (3rd Strike)", MACHINE_SUPPORTS_SAVE )
-GAME( 2002, kof2k2e3,    kof2002, kof2002, 	    neo_ek, mvs_led_state, empty_init, ROT0, "Creamymami", "Kof2002 (Add Char - Ultra kill start max)", MACHINE_SUPPORTS_SAVE )
 GAME( 2002, kof2k2evo2,  kof2002, neobase_ek, 	neo_ek, mvs_led_state, empty_init,   ROT0, "FCHT / EGHT", "Kof2002 (Evolution v1.3)", MACHINE_SUPPORTS_SAVE )
 GAME( 2008, kof2k2ht,    kof2002, neobase_ek, 	neo_ek, mvs_led_state, empty_init,   ROT0, "FMG CO", "Kof2002 (HT)", MACHINE_SUPPORTS_SAVE )
 GAME( 2010, kof2k2ibp,   kof2002, neobase_ek, 	neo_ek, mvs_led_state, empty_init,   ROT0, "Ismamj", "Kof2002 (Ice Blue Perfect)", MACHINE_SUPPORTS_SAVE )
