@@ -42549,10 +42549,65 @@ wh2s05
 
 // SNK vs CAPCOM
 //@source : neo_svc
+svccpjh
+svccpjoy
+svccpru
+svccprw
+svccpsct
+svccpsp
+svccpsp2
+svccpta
+svccpwh
+svcmai
+svccprw
+svcesv
 svcplusa2016
+svcpryu    
+svcsplus2016
+svcspryu   
+svcstdse   
 svchs06
+svchs11
+svchs12
+svcboots02
+svcboots10
+svcboots11
 svcboots16
+svcboots27
+svcboots36
+svcboots37
+svcboots39
+svcpcbs01
+svcpcbs03
+svcpcbs04
+svcpcbs05
+svcpcbs08
+svcpcbs09
+svcpcbs10
+svcpcbas01
+svcpcbas02
+svcpcbas04
+svcpcbas05
+svcpluss01
+svcpluss02
+svcpluss03
+svcpluss05
+svcpluss08
+svcpluss09
+svcpluss10
+svcpluss11
+svcpluss12
+svcpluss16
+svcpluss26
 svcplusas06
+svcsplus01
+svcsplus04
+svcsplus05
+svcsplus06
+svcsplus07
+svcsplus08
+svcsplus15
+svcsplus18
 
 //@source:neo_sengoku.cpp
 sengokucd 
@@ -42579,21 +42634,30 @@ sengoku3s13
 
 // samurai showdown
 //@source:neo_samsho.cpp
-samshod
-samshob
-samshoeh
-samshoeh2
+samshoeasy
+samshos01
+samshos02
+samshos03
+samshos04
+samshos05
+samshos06
+samshos07
+samshos08
 
 samsho2eh
-samsho2b
-samsho2b1
-samsho2b2
+samsho2sp5
 samsho2s01
+samsho2s02
+samsho2s05
+samsho2s13
+samsho2s16
 
-samsho3d
-samsho3ehc
-samsho3eh
-samsho3eh2
+samsho3s03
+samsho3s09
+samsho3s10
+samsho3s11
+samsho3s12
+samsho3s14
 
 samsh5sphc 
 samsh5spnzk
@@ -42639,8 +42703,6 @@ rbff2bs03
 rbff2hs04  
 rbff2hs06
 rbffsehd
-rbffspeceh
-rbffspy
 
 shocktr2h
 breaksp
@@ -43184,22 +43246,9 @@ ct2k3k3s17
 ct2k3k3s30
 
 // samurai showdown
-samshos04
-samshos05
-samshos07
-samshoeasy
-samsho2s03
-samsho2s05
-samsho2s09
-samsho2s11
-samsho2s12
 
-//samsho2sp
-samsho2sp5
-samsho3s05
-samsho3s07
-samsho3s08
-samsho3s12
+
+
 samsho4s06
 samsho4s14
 samsho5s27

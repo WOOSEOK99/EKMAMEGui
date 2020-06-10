@@ -619,33 +619,6 @@ ROM_START( rbffspeceh )
 	ROM_LOAD16_BYTE( "223-c8.bin", 0x1800001, 0x400000, CRC(5ad62102 )) /* Plane 2,3 */
 ROM_END
 
-ROM_START( rbffspy )
-	ROM_REGION( 0x500000, "cslot1:maincpu", ROMREGION_BE|ROMREGION_16BIT )
-	ROM_LOAD16_WORD_SWAP( "223y-p1.bin", 0x000000, 0x100000, CRC(2cf01f60))
-	ROM_LOAD16_WORD_SWAP( "223-p2.bin", 0x100000, 0x400000, CRC(addd8f08 ))
-
-	NEO_SFIX_128K( "223-s1.bin", CRC(7ecd6e8c ))
-
-	NEO_BIOS_AUDIO_128K( "223-m1.bin", CRC(3fee46bf ))
-
-	ROM_REGION( 0xc00000, "cslot1:ymsnd", 0 )
-	ROM_LOAD( "223-v1.bin", 0x000000, 0x400000, CRC(76673869 ))
-	ROM_LOAD( "223-v2.bin", 0x400000, 0x400000, CRC(7a275acd ))
-	ROM_LOAD( "223-v3.bin", 0x800000, 0x400000, CRC(5a797fd2 ))
-
-	
-
-	ROM_REGION( 0x2000000, "cslot1:sprites", 0 )
-	ROM_LOAD16_BYTE( "223-c1.bin", 0x0000000, 0x400000, CRC(ebab05e2 )) /* Plane 0,1 */
-	ROM_LOAD16_BYTE( "223-c2.bin", 0x0000001, 0x400000, CRC(641868c3 )) /* Plane 2,3 */
-	ROM_LOAD16_BYTE( "223-c3.bin", 0x0800000, 0x400000, CRC(ca00191f )) /* Plane 0,1 */
-	ROM_LOAD16_BYTE( "223-c4.bin", 0x0800001, 0x400000, CRC(1f23d860 )) /* Plane 2,3 */
-	ROM_LOAD16_BYTE( "223-c5.bin", 0x1000000, 0x400000, CRC(321e362c )) /* Plane 0,1 */
-	ROM_LOAD16_BYTE( "223-c6.bin", 0x1000001, 0x400000, CRC(d8fcef90 )) /* Plane 2,3 */
-	ROM_LOAD16_BYTE( "223-c7.bin", 0x1800000, 0x400000, CRC(bc80dd2d )) /* Plane 0,1 */
-	ROM_LOAD16_BYTE( "223-c8.bin", 0x1800001, 0x400000, CRC(5ad62102 )) /* Plane 2,3 */
-ROM_END
-
 ROM_START( rbffsud )
 	ROM_REGION( 0x500000, "cslot1:maincpu", ROMREGION_BE|ROMREGION_16BIT )
 	ROM_LOAD16_WORD_SWAP( "223ud-p1.bin", 0x000000, 0x100000, CRC(b173df6b))
@@ -1361,28 +1334,28 @@ ROM_START( rbffspecs01 )
 ROM_END
 
 ROM_START( rbffspecs02 )
- ROM_REGION( 0x500000, "maincpu", 0 )
- ROM_LOAD16_WORD_SWAP( "223ss02.p1",  0x000000, 0x100000, CRC(f26ba629) SHA1(e2e436242a4dd6b09e41fad20eb4861b02c0e821) )
- ROM_LOAD16_WORD_SWAP( "223.p2", 0x100000, 0x400000, CRC(addd8f08) SHA1(abaf5b86c8ec915c07ef2d83fce9ad03acaa4817) )
+	ROM_REGION( 0x500000, "cslot1:maincpu", ROMREGION_BE|ROMREGION_16BIT )
+	ROM_LOAD16_WORD_SWAP( "223ss02.p1",  0x000000, 0x100000, CRC(f26ba629) SHA1(e2e436242a4dd6b09e41fad20eb4861b02c0e821) )
+	ROM_LOAD16_WORD_SWAP( "223.p2", 0x100000, 0x400000, CRC(addd8f08) SHA1(abaf5b86c8ec915c07ef2d83fce9ad03acaa4817) )
 
- NEO_SFIX_128K( "223.s1", CRC(7ecd6e8c) SHA1(465455afc4d83cbb118142be4671b2539ffafd79) )
+	NEO_SFIX_128K( "223.s1", CRC(7ecd6e8c) SHA1(465455afc4d83cbb118142be4671b2539ffafd79) )
 
- NEO_BIOS_AUDIO_128K( "223.m1", CRC(3fee46bf) SHA1(e750f85233953853618fcdff980a4721af1710a3) )
+	NEO_BIOS_AUDIO_128K( "223.m1", CRC(3fee46bf) SHA1(e750f85233953853618fcdff980a4721af1710a3) )
 
- ROM_REGION( 0xc00000, "ymsnd", 0 )
- ROM_LOAD( "223.v1", 0x000000, 0x400000, CRC(76673869) SHA1(78a26afa29f73de552ffabdbf3fc4bf26be8ae9e) )
- ROM_LOAD( "223.v2", 0x400000, 0x400000, CRC(7a275acd) SHA1(8afe87ce822614262b72a90b371fc79155ac0d0c) )
- ROM_LOAD( "223.v3", 0x800000, 0x400000, CRC(5a797fd2) SHA1(94958e334f86d4d71059af8138f255b8d97a3b01) )
+	ROM_REGION( 0xc00000, "cslot1:ymsnd", 0 )
+	ROM_LOAD( "223.v1", 0x000000, 0x400000, CRC(76673869) SHA1(78a26afa29f73de552ffabdbf3fc4bf26be8ae9e) )
+	ROM_LOAD( "223.v2", 0x400000, 0x400000, CRC(7a275acd) SHA1(8afe87ce822614262b72a90b371fc79155ac0d0c) )
+	ROM_LOAD( "223.v3", 0x800000, 0x400000, CRC(5a797fd2) SHA1(94958e334f86d4d71059af8138f255b8d97a3b01) )
 
- ROM_REGION( 0x2000000, "sprites", 0 )
- ROM_LOAD16_BYTE( "223.c1", 0x0000000, 0x400000, CRC(ebab05e2) SHA1(0d60a8b631e3a3dcfbfdd7779dee081c9548ec39) )
- ROM_LOAD16_BYTE( "223.c2", 0x0000001, 0x400000, CRC(641868c3) SHA1(aa1aeb661842276b3326bfa4f1456f75bfecd52e) )
- ROM_LOAD16_BYTE( "223.c3", 0x0800000, 0x400000, CRC(ca00191f) SHA1(96977febfcc513e1848d7029ff169cdf51104038) )
- ROM_LOAD16_BYTE( "223.c4", 0x0800001, 0x400000, CRC(1f23d860) SHA1(e18df52f898a51074e07a0b8c6e75873e7cde35e) )
- ROM_LOAD16_BYTE( "223.c5", 0x1000000, 0x400000, CRC(321e362c) SHA1(39bd189334278f266124c97c6f70995f6f171cea) )
- ROM_LOAD16_BYTE( "223.c6", 0x1000001, 0x400000, CRC(d8fcef90) SHA1(bbccacb27f1e587bc144fe7ce68bd7b327ceaaee) )
- ROM_LOAD16_BYTE( "223.c7", 0x1800000, 0x400000, CRC(bc80dd2d) SHA1(086f372015eede88c6c578595fe915e28a589d2f) )
- ROM_LOAD16_BYTE( "223.c8", 0x1800001, 0x400000, CRC(5ad62102) SHA1(e28cc9840caed2a1a8bd65a03bef05231071040c) )
+	ROM_REGION( 0x2000000, "cslot1:sprites", 0 )
+	ROM_LOAD16_BYTE( "223.c1", 0x0000000, 0x400000, CRC(ebab05e2) SHA1(0d60a8b631e3a3dcfbfdd7779dee081c9548ec39) )
+	ROM_LOAD16_BYTE( "223.c2", 0x0000001, 0x400000, CRC(641868c3) SHA1(aa1aeb661842276b3326bfa4f1456f75bfecd52e) )
+	ROM_LOAD16_BYTE( "223.c3", 0x0800000, 0x400000, CRC(ca00191f) SHA1(96977febfcc513e1848d7029ff169cdf51104038) )
+	ROM_LOAD16_BYTE( "223.c4", 0x0800001, 0x400000, CRC(1f23d860) SHA1(e18df52f898a51074e07a0b8c6e75873e7cde35e) )
+	ROM_LOAD16_BYTE( "223.c5", 0x1000000, 0x400000, CRC(321e362c) SHA1(39bd189334278f266124c97c6f70995f6f171cea) )
+	ROM_LOAD16_BYTE( "223.c6", 0x1000001, 0x400000, CRC(d8fcef90) SHA1(bbccacb27f1e587bc144fe7ce68bd7b327ceaaee) )
+	ROM_LOAD16_BYTE( "223.c7", 0x1800000, 0x400000, CRC(bc80dd2d) SHA1(086f372015eede88c6c578595fe915e28a589d2f) )
+	ROM_LOAD16_BYTE( "223.c8", 0x1800001, 0x400000, CRC(5ad62102) SHA1(e28cc9840caed2a1a8bd65a03bef05231071040c) )
 ROM_END
 
  /********************************************
@@ -1709,7 +1682,5 @@ GAME( 1996, rbffspb,   rbffspec, neobase_ek, 	neo_ek, mvs_led_state,          em
 GAME( 1996, rbffsbd,   rbffspec, neobase_ek, 	neo_ek, mvs_led_state,          empty_init, ROT0, "SNK", "Real Bout Fatal Fury Special (In AES mode can choose Geese Howard, Andy B. EX, Blue Mary EX, Billy K. EX and Tung Fu Rue EX)", MACHINE_SUPPORTS_SAVE)
 GAME( 1996, rbffsehd,  rbffspec, neobase_ek, 	neo_ek, mvs_led_state,          empty_init, ROT0, "SNK", "Real Bout Fatal Fury Special (All charcaters ultra kill style change - can choose Geese Howard - can choose 4 EX characters)", MACHINE_SUPPORTS_SAVE)
 GAME( 1996, rbffspecb, rbffspec, neobase_ek, 	neo_ek, mvs_led_state,          empty_init, ROT0, "SNK", "Real Bout Fatal Fury Special (Can choose Geese Howard)", MACHINE_SUPPORTS_SAVE)
-GAME( 1996, rbffspeceh,rbffspec, neobase_ek, 	neo_ek, mvs_led_state,          empty_init, ROT0, "SNK", "Real Bout Fatal Fury Special (Can choose Geese Howard - ultra power hack)", MACHINE_SUPPORTS_SAVE)
-GAME( 1996, rbffspy,   rbffspec, neobase_ek, 	neo_ek, mvs_led_state,          empty_init, ROT0, "SNK", "Real Bout Fatal Fury Special (Ultra power hack)", MACHINE_SUPPORTS_SAVE)
 GAME( 1996, rbffsud,   rbffspec, neobase_ek, 	neo_ek, mvs_led_state,          empty_init, ROT0, "SNK", "Real Bout Fatal Fury Special (All charcaters ultra kill style change)", MACHINE_SUPPORTS_SAVE)
 

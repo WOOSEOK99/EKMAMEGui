@@ -556,3 +556,321 @@ GAME( 2003, ms5pcb,     0,        neopcb,   dualbios, neopcb_state, init_ms5pcb,
 GAME( 2003, svcpcb,     0,        neopcb,   dualbios, neopcb_state, init_svcpcb,   ROT0, "Playmore / Capcom", "SNK vs. Capcom - SVC Chaos (JAMMA PCB, set 1)", MACHINE_SUPPORTS_SAVE )
 GAME( 2003, svcpcba,    svcpcb,   neopcb,   dualbios, neopcb_state, init_svcpcb,   ROT0, "Playmore / Capcom", "SNK vs. Capcom - SVC Chaos (JAMMA PCB, set 2)", MACHINE_SUPPORTS_SAVE ) /* Encrypted Code */
 GAME( 2003, kf2k3pcb,   0,        neopcb,   neogeo,   neopcb_state, init_kf2k3pcb, ROT0, "SNK Playmore", "The King of Fighters 2003 (Japan, JAMMA PCB)", MACHINE_SUPPORTS_SAVE )
+
+//hack
+ROM_START( svcpcbs01 )
+	ROM_REGION( 0x2000000, "maincpu", 0 )
+	ROM_LOAD16_WORD_SWAP( "269hw01-p1.p1", 0x000000, 0x2000000, CRC(fcb792b1) SHA1(f6ae463fc5b077a41fbe4072cbf0a37cdeaaf185) )
+
+	ROM_REGION( 0x80000, "fixed", 0 ) /* larger char set */
+	ROM_FILL( 0x000000, 0x80000, 0x000000 )
+	ROM_REGION( 0x20000, "fixedbios", 0 )
+	ROM_LOAD( "sfix.sfix", 0x000000, 0x20000, CRC(c2ea0cfd) SHA1(fd4a618cdcdbf849374f0a50dd8efe9dbab706c3) )
+
+	ROM_REGION16_BE( 0x80000, "mainbios", 0 )
+	ROM_LOAD16_WORD_SWAP( "sp-4x.sp1", 0x00000, 0x80000, CRC(b4590283) SHA1(47047ed5b6062babc0a0bebcc30e4b3f021e115a) )
+
+	ROM_REGION( 0x80000, "audiocrypt", 0 )
+	ROM_LOAD( "269.m1", 0x00000, 0x80000, CRC(f6819d00) SHA1(d3bbe09df502464f104e53501708ac6e2c1832c6) )
+	ROM_REGION( 0x90000, "audiocpu", ROMREGION_ERASEFF )
+
+	ROM_Y_ZOOM
+
+	ROM_REGION( 0x1000000, "ymsnd", 0 )
+	ROM_LOAD( "269.v1", 0x000000, 0x800000, CRC(c659b34c) SHA1(1931e8111ef43946f68699f8707334c96f753a1e) )
+	ROM_LOAD( "269.v2", 0x800000, 0x800000, CRC(dd903835) SHA1(e58d38950a7a8697bb22a1cc7a371ae6664ae8f9) )
+
+	ROM_REGION( 0x4000000, "sprites", 0 )
+	ROM_LOAD( "269c.c1", 0x0000000, 0x2000000, CRC(1b608f9c) SHA1(4e70ad182da2ca18815bd3936efb04a06ebce01e) )
+	ROM_LOAD( "269c.c2", 0x2000000, 0x2000000, CRC(5a95f294) SHA1(6123cc7b20b494076185d27c2ffea910e124b195) )
+ROM_END
+
+ROM_START( svcpcbs03 )
+	ROM_REGION( 0x2000000, "maincpu", 0 )
+	ROM_LOAD16_WORD_SWAP( "269hw03-p1.p1", 0x000000, 0x2000000, CRC(94d9b6ca) SHA1(bd5859c5cba0ea6530a64a56646fa8da17aa64ae) )
+
+	ROM_REGION( 0x80000, "fixed", 0 ) /* larger char set */
+	ROM_FILL( 0x000000, 0x80000, 0x000000 )
+	ROM_REGION( 0x20000, "fixedbios", 0 )
+	ROM_LOAD( "sfix.sfix", 0x000000, 0x20000, CRC(c2ea0cfd) SHA1(fd4a618cdcdbf849374f0a50dd8efe9dbab706c3) )
+
+	ROM_REGION16_BE( 0x80000, "mainbios", 0 )
+	ROM_LOAD16_WORD_SWAP( "sp-4x.sp1", 0x00000, 0x80000, CRC(b4590283) SHA1(47047ed5b6062babc0a0bebcc30e4b3f021e115a) )
+
+	ROM_REGION( 0x80000, "audiocrypt", 0 )
+	ROM_LOAD( "269.m1", 0x00000, 0x80000, CRC(f6819d00) SHA1(d3bbe09df502464f104e53501708ac6e2c1832c6) )
+	ROM_REGION( 0x90000, "audiocpu", ROMREGION_ERASEFF )
+
+	ROM_Y_ZOOM
+
+	ROM_REGION( 0x1000000, "ymsnd", 0 )
+	ROM_LOAD( "269.v1", 0x000000, 0x800000, CRC(c659b34c) SHA1(1931e8111ef43946f68699f8707334c96f753a1e) )
+	ROM_LOAD( "269.v2", 0x800000, 0x800000, CRC(dd903835) SHA1(e58d38950a7a8697bb22a1cc7a371ae6664ae8f9) )
+
+	ROM_REGION( 0x4000000, "sprites", 0 )
+	ROM_LOAD( "269c.c1", 0x0000000, 0x2000000, CRC(1b608f9c) SHA1(4e70ad182da2ca18815bd3936efb04a06ebce01e) )
+	ROM_LOAD( "269c.c2", 0x2000000, 0x2000000, CRC(5a95f294) SHA1(6123cc7b20b494076185d27c2ffea910e124b195) )
+ROM_END
+
+ROM_START( svcpcbs04 )
+	ROM_REGION( 0x2000000, "maincpu", 0 )
+	ROM_LOAD16_WORD_SWAP( "269hw04-p1.p1", 0x000000, 0x2000000, CRC(452eb1a4) SHA1(8cf56f7621bb5258bd00568e3e5e29c1382c9986) )
+
+	ROM_REGION( 0x80000, "fixed", 0 ) /* larger char set */
+	ROM_FILL( 0x000000, 0x80000, 0x000000 )
+	ROM_REGION( 0x20000, "fixedbios", 0 )
+	ROM_LOAD( "sfix.sfix", 0x000000, 0x20000, CRC(c2ea0cfd) SHA1(fd4a618cdcdbf849374f0a50dd8efe9dbab706c3) )
+
+	ROM_REGION16_BE( 0x80000, "mainbios", 0 )
+	ROM_LOAD16_WORD_SWAP( "sp-4x.sp1", 0x00000, 0x80000, CRC(b4590283) SHA1(47047ed5b6062babc0a0bebcc30e4b3f021e115a) )
+
+	ROM_REGION( 0x80000, "audiocrypt", 0 )
+	ROM_LOAD( "269.m1", 0x00000, 0x80000, CRC(f6819d00) SHA1(d3bbe09df502464f104e53501708ac6e2c1832c6) )
+	ROM_REGION( 0x90000, "audiocpu", ROMREGION_ERASEFF )
+
+	ROM_Y_ZOOM
+
+	ROM_REGION( 0x1000000, "ymsnd", 0 )
+	ROM_LOAD( "269.v1", 0x000000, 0x800000, CRC(c659b34c) SHA1(1931e8111ef43946f68699f8707334c96f753a1e) )
+	ROM_LOAD( "269.v2", 0x800000, 0x800000, CRC(dd903835) SHA1(e58d38950a7a8697bb22a1cc7a371ae6664ae8f9) )
+
+	ROM_REGION( 0x4000000, "sprites", 0 )
+	ROM_LOAD( "269c.c1", 0x0000000, 0x2000000, CRC(1b608f9c) SHA1(4e70ad182da2ca18815bd3936efb04a06ebce01e) )
+	ROM_LOAD( "269c.c2", 0x2000000, 0x2000000, CRC(5a95f294) SHA1(6123cc7b20b494076185d27c2ffea910e124b195) )
+ROM_END
+
+ROM_START( svcpcbs05 )
+	ROM_REGION( 0x2000000, "maincpu", 0 )
+	ROM_LOAD16_WORD_SWAP( "269hw05-p1.p1", 0x000000, 0x2000000, CRC(4538ca32) SHA1(15912998f141698de902fb0ed57d81ebd9db3cd4) )
+
+	ROM_REGION( 0x80000, "fixed", 0 ) /* larger char set */
+	ROM_FILL( 0x000000, 0x80000, 0x000000 )
+	ROM_REGION( 0x20000, "fixedbios", 0 )
+	ROM_LOAD( "sfix.sfix", 0x000000, 0x20000, CRC(c2ea0cfd) SHA1(fd4a618cdcdbf849374f0a50dd8efe9dbab706c3) )
+
+	ROM_REGION16_BE( 0x80000, "mainbios", 0 )
+	ROM_LOAD16_WORD_SWAP( "sp-4x.sp1", 0x00000, 0x80000, CRC(b4590283) SHA1(47047ed5b6062babc0a0bebcc30e4b3f021e115a) )
+
+	ROM_REGION( 0x80000, "audiocrypt", 0 )
+	ROM_LOAD( "269.m1", 0x00000, 0x80000, CRC(f6819d00) SHA1(d3bbe09df502464f104e53501708ac6e2c1832c6) )
+	ROM_REGION( 0x90000, "audiocpu", ROMREGION_ERASEFF )
+
+	ROM_Y_ZOOM
+
+	ROM_REGION( 0x1000000, "ymsnd", 0 )
+	ROM_LOAD( "269.v1", 0x000000, 0x800000, CRC(c659b34c) SHA1(1931e8111ef43946f68699f8707334c96f753a1e) )
+	ROM_LOAD( "269.v2", 0x800000, 0x800000, CRC(dd903835) SHA1(e58d38950a7a8697bb22a1cc7a371ae6664ae8f9) )
+
+	ROM_REGION( 0x4000000, "sprites", 0 )
+	ROM_LOAD( "269c.c1", 0x0000000, 0x2000000, CRC(1b608f9c) SHA1(4e70ad182da2ca18815bd3936efb04a06ebce01e) )
+	ROM_LOAD( "269c.c2", 0x2000000, 0x2000000, CRC(5a95f294) SHA1(6123cc7b20b494076185d27c2ffea910e124b195) )
+ROM_END
+
+ROM_START( svcpcbs08 )
+	ROM_REGION( 0x2000000, "maincpu", 0 )
+	ROM_LOAD16_WORD_SWAP( "269hw08-p1.p1", 0x000000, 0x2000000, CRC(8e4a6847) SHA1(ae14f737339cc677c51c2e7a412fc3661a7c9b0d) )
+
+	ROM_REGION( 0x80000, "fixed", 0 ) /* larger char set */
+	ROM_FILL( 0x000000, 0x80000, 0x000000 )
+	ROM_REGION( 0x20000, "fixedbios", 0 )
+	ROM_LOAD( "sfix.sfix", 0x000000, 0x20000, CRC(c2ea0cfd) SHA1(fd4a618cdcdbf849374f0a50dd8efe9dbab706c3) )
+
+	ROM_REGION16_BE( 0x80000, "mainbios", 0 )
+	ROM_LOAD16_WORD_SWAP( "sp-4x.sp1", 0x00000, 0x80000, CRC(b4590283) SHA1(47047ed5b6062babc0a0bebcc30e4b3f021e115a) )
+
+	ROM_REGION( 0x80000, "audiocrypt", 0 )
+	ROM_LOAD( "269.m1", 0x00000, 0x80000, CRC(f6819d00) SHA1(d3bbe09df502464f104e53501708ac6e2c1832c6) )
+	ROM_REGION( 0x90000, "audiocpu", ROMREGION_ERASEFF )
+
+	ROM_Y_ZOOM
+
+	ROM_REGION( 0x1000000, "ymsnd", 0 )
+	ROM_LOAD( "269.v1", 0x000000, 0x800000, CRC(c659b34c) SHA1(1931e8111ef43946f68699f8707334c96f753a1e) )
+	ROM_LOAD( "269.v2", 0x800000, 0x800000, CRC(dd903835) SHA1(e58d38950a7a8697bb22a1cc7a371ae6664ae8f9) )
+
+	ROM_REGION( 0x4000000, "sprites", 0 )
+	ROM_LOAD( "269c.c1", 0x0000000, 0x2000000, CRC(1b608f9c) SHA1(4e70ad182da2ca18815bd3936efb04a06ebce01e) )
+	ROM_LOAD( "269c.c2", 0x2000000, 0x2000000, CRC(5a95f294) SHA1(6123cc7b20b494076185d27c2ffea910e124b195) )
+ROM_END
+
+ROM_START( svcpcbs09 )
+	ROM_REGION( 0x2000000, "maincpu", 0 )
+	ROM_LOAD16_WORD_SWAP( "269hw09-p1.p1", 0x000000, 0x2000000, CRC(2b72fbb5) SHA1(426ce039ec91a631025194ce8b2ce9edab750602) )
+
+	ROM_REGION( 0x80000, "fixed", 0 ) /* larger char set */
+	ROM_FILL( 0x000000, 0x80000, 0x000000 )
+	ROM_REGION( 0x20000, "fixedbios", 0 )
+	ROM_LOAD( "sfix.sfix", 0x000000, 0x20000, CRC(c2ea0cfd) SHA1(fd4a618cdcdbf849374f0a50dd8efe9dbab706c3) )
+
+	ROM_REGION16_BE( 0x80000, "mainbios", 0 )
+	ROM_LOAD16_WORD_SWAP( "sp-4x.sp1", 0x00000, 0x80000, CRC(b4590283) SHA1(47047ed5b6062babc0a0bebcc30e4b3f021e115a) )
+
+	ROM_REGION( 0x80000, "audiocrypt", 0 )
+	ROM_LOAD( "269.m1", 0x00000, 0x80000, CRC(f6819d00) SHA1(d3bbe09df502464f104e53501708ac6e2c1832c6) )
+	ROM_REGION( 0x90000, "audiocpu", ROMREGION_ERASEFF )
+
+	ROM_Y_ZOOM
+
+	ROM_REGION( 0x1000000, "ymsnd", 0 )
+	ROM_LOAD( "269.v1", 0x000000, 0x800000, CRC(c659b34c) SHA1(1931e8111ef43946f68699f8707334c96f753a1e) )
+	ROM_LOAD( "269.v2", 0x800000, 0x800000, CRC(dd903835) SHA1(e58d38950a7a8697bb22a1cc7a371ae6664ae8f9) )
+
+	ROM_REGION( 0x4000000, "sprites", 0 )
+	ROM_LOAD( "269c.c1", 0x0000000, 0x2000000, CRC(1b608f9c) SHA1(4e70ad182da2ca18815bd3936efb04a06ebce01e) )
+	ROM_LOAD( "269c.c2", 0x2000000, 0x2000000, CRC(5a95f294) SHA1(6123cc7b20b494076185d27c2ffea910e124b195) )
+ROM_END
+
+ROM_START( svcpcbs10 )
+	ROM_REGION( 0x2000000, "maincpu", 0 )
+	ROM_LOAD16_WORD_SWAP( "269hw10-p1.p1", 0x000000, 0x2000000, CRC(bdc6bc6a) SHA1(c5293e4cb58022f820a7119a86ea6b78ece0edee) )
+
+	ROM_REGION( 0x80000, "fixed", 0 ) /* larger char set */
+	ROM_FILL( 0x000000, 0x80000, 0x000000 )
+	ROM_REGION( 0x20000, "fixedbios", 0 )
+	ROM_LOAD( "sfix.sfix", 0x000000, 0x20000, CRC(c2ea0cfd) SHA1(fd4a618cdcdbf849374f0a50dd8efe9dbab706c3) )
+
+	ROM_REGION16_BE( 0x80000, "mainbios", 0 )
+	ROM_LOAD16_WORD_SWAP( "sp-4x.sp1", 0x00000, 0x80000, CRC(b4590283) SHA1(47047ed5b6062babc0a0bebcc30e4b3f021e115a) )
+
+	ROM_REGION( 0x80000, "audiocrypt", 0 )
+	ROM_LOAD( "269.m1", 0x00000, 0x80000, CRC(f6819d00) SHA1(d3bbe09df502464f104e53501708ac6e2c1832c6) )
+	ROM_REGION( 0x90000, "audiocpu", ROMREGION_ERASEFF )
+
+	ROM_Y_ZOOM
+
+	ROM_REGION( 0x1000000, "ymsnd", 0 )
+	ROM_LOAD( "269.v1", 0x000000, 0x800000, CRC(c659b34c) SHA1(1931e8111ef43946f68699f8707334c96f753a1e) )
+	ROM_LOAD( "269.v2", 0x800000, 0x800000, CRC(dd903835) SHA1(e58d38950a7a8697bb22a1cc7a371ae6664ae8f9) )
+
+	ROM_REGION( 0x4000000, "sprites", 0 )
+	ROM_LOAD( "269c.c1", 0x0000000, 0x2000000, CRC(1b608f9c) SHA1(4e70ad182da2ca18815bd3936efb04a06ebce01e) )
+	ROM_LOAD( "269c.c2", 0x2000000, 0x2000000, CRC(5a95f294) SHA1(6123cc7b20b494076185d27c2ffea910e124b195) )
+ROM_END
+
+ROM_START( svcpcbas01 )
+	ROM_REGION( 0x800000, "maincpu", 0 )
+	ROM_LOAD32_WORD_SWAP( "269esv.p1", 0x000000, 0x400000, CRC(c6fd0131) SHA1(25439e469d0403439fde5d6532081a9b405bf642) )
+	ROM_LOAD32_WORD_SWAP( "269hx05-p2.p2", 0x000002, 0x400000, CRC(c0012ae8) SHA1(794b4bc4c76e3a5054ddfc0343f8d424809d325e) )
+
+	ROM_REGION( 0x80000, "fixed", 0 ) /* larger char set */
+	ROM_FILL( 0x000000, 0x80000, 0x000000 )
+	ROM_REGION( 0x20000, "fixedbios", 0 )
+	ROM_LOAD( "sfix.sfix", 0x000000, 0x20000, CRC(c2ea0cfd) SHA1(fd4a618cdcdbf849374f0a50dd8efe9dbab706c3) )
+
+	ROM_REGION16_BE( 0x80000, "mainbios", 0 )
+	ROM_LOAD16_WORD_SWAP( "sp-4x.sp1", 0x00000, 0x80000, CRC(b4590283) SHA1(47047ed5b6062babc0a0bebcc30e4b3f021e115a) )
+
+	ROM_REGION( 0x80000, "audiocrypt", 0 )
+	ROM_LOAD( "269.m1", 0x00000, 0x80000, CRC(f6819d00) SHA1(d3bbe09df502464f104e53501708ac6e2c1832c6) )
+	ROM_REGION( 0x90000, "audiocpu", ROMREGION_ERASEFF )
+
+	ROM_Y_ZOOM
+
+	ROM_REGION( 0x1000000, "ymsnd", 0 )
+	ROM_LOAD( "269-v1a.v1", 0x000000, 0x1000000, CRC(a6af4753) SHA1(ec4f61a526b707a7faec4653b773beb3bf3a17ba) )
+
+	ROM_REGION( 0x4000000, "sprites", 0 )
+	ROM_LOAD32_WORD( "269hw01-c1a.c1", 0x0000000, 0x1000000, CRC(e9b3fe93) SHA1(8fb2b3b9d8d03a917909e47c2cafab2275aec53f) )
+	ROM_LOAD32_WORD( "269hw01-c2a.c2", 0x0000002, 0x1000000, CRC(3fec2998) SHA1(9cd1a36fdbca7131e94958ceb351db5798ca856f) )
+	ROM_LOAD32_WORD( "269hw01-c3a.c3", 0x2000000, 0x1000000, CRC(4c0e034a) SHA1(05220eb9c58210f52cc1706be6b0873004f9da80) )
+	ROM_LOAD32_WORD( "269hw01-c4a.c4", 0x2000002, 0x1000000, CRC(d306772e) SHA1(111c463b307b50b550fbb56b413e1be598d028cd) )
+ROM_END
+
+ROM_START( svcpcbas02 )
+	ROM_REGION( 0x800000, "maincpu", 0 )
+	ROM_LOAD32_WORD_SWAP( "269-p1a.p1", 0x000000, 0x400000, CRC(38e2005e) SHA1(1b902905916a30969282f1399a756e32ff069097)  )
+	ROM_LOAD32_WORD_SWAP( "269hx07-p2.p2", 0x000002, 0x400000, CRC(8f939a64) SHA1(a17a8c46aaccb54c5be6474532863ff7548a78bd) )
+
+	ROM_REGION( 0x80000, "fixed", 0 ) /* larger char set */
+	ROM_FILL( 0x000000, 0x80000, 0x000000 )
+	ROM_REGION( 0x20000, "fixedbios", 0 )
+	ROM_LOAD( "sfix.sfix", 0x000000, 0x20000, CRC(c2ea0cfd) SHA1(fd4a618cdcdbf849374f0a50dd8efe9dbab706c3) )
+
+	ROM_REGION16_BE( 0x80000, "mainbios", 0 )
+	ROM_LOAD16_WORD_SWAP( "sp-4x.sp1", 0x00000, 0x80000, CRC(b4590283) SHA1(47047ed5b6062babc0a0bebcc30e4b3f021e115a) )
+
+	ROM_Y_ZOOM
+
+	ROM_REGION( 0x80000, "audiocrypt", 0 )
+	ROM_LOAD( "269.m1", 0x00000, 0x80000, CRC(f6819d00) SHA1(d3bbe09df502464f104e53501708ac6e2c1832c6) )
+	ROM_REGION( 0x90000, "audiocpu", ROMREGION_ERASEFF )
+
+	ROM_REGION( 0x1000000, "ymsnd", 0 )
+	ROM_LOAD( "269-v1a.v1", 0x000000, 0x1000000, CRC(a6af4753) SHA1(ec4f61a526b707a7faec4653b773beb3bf3a17ba) )
+
+	ROM_REGION( 0x4000000, "sprites", 0 )
+	ROM_LOAD32_WORD( "269hw02-c1a.c1", 0x0000000, 0x1000000, CRC(b6c9c8e1) SHA1(3bb91ae7c371c6a830d62dd42cb97353c513726c) )
+	ROM_LOAD32_WORD( "269hw02-c2a.c2", 0x0000002, 0x1000000, CRC(7dad5a5d) SHA1(31578852b217b3878ef7e7de8bbd908f34f131d0) )
+	ROM_LOAD32_WORD( "269hw02-c3a.c3", 0x2000000, 0x1000000, CRC(abae5654) SHA1(aa86568212ecbf185820a4300d0f8449cc984a2a) )
+	ROM_LOAD32_WORD( "269hw02-c4a.c4", 0x2000002, 0x1000000, CRC(1ede97ee) SHA1(eff47dfd382ceed4c9e0a1a33bab351ffa249ef2) )
+ROM_END
+
+ROM_START( svcpcbas04 )
+	ROM_REGION( 0x800000, "maincpu", 0 )
+	ROM_LOAD32_WORD_SWAP( "269-p1a.p1", 0x000000, 0x400000, CRC(38e2005e) SHA1(1b902905916a30969282f1399a756e32ff069097)  )
+	ROM_LOAD32_WORD_SWAP( "269-p2a.p1", 0x000002, 0x400000, CRC(6d13797c) SHA1(3cb71a95cea6b006b44cac0f547df88aec0007b7)  )
+
+	ROM_REGION( 0x80000, "fixed", 0 ) /* larger char set */
+	ROM_FILL( 0x000000, 0x80000, 0x000000 )
+	ROM_REGION( 0x20000, "fixedbios", 0 )
+	ROM_LOAD( "sfix.sfix", 0x000000, 0x20000, CRC(c2ea0cfd) SHA1(fd4a618cdcdbf849374f0a50dd8efe9dbab706c3) )
+
+	ROM_REGION16_BE( 0x80000, "mainbios", 0 )
+	ROM_LOAD16_WORD_SWAP( "sp-4x.sp1", 0x00000, 0x80000, CRC(b4590283) SHA1(47047ed5b6062babc0a0bebcc30e4b3f021e115a) )
+
+	ROM_Y_ZOOM
+
+	ROM_REGION( 0x80000, "audiocrypt", 0 )
+	ROM_LOAD( "269.m1", 0x00000, 0x80000, CRC(f6819d00) SHA1(d3bbe09df502464f104e53501708ac6e2c1832c6) )
+	ROM_REGION( 0x90000, "audiocpu", ROMREGION_ERASEFF )
+
+	ROM_REGION( 0x1000000, "ymsnd", 0 )
+	ROM_LOAD( "269-v1a.v1", 0x000000, 0x1000000, CRC(a6af4753) SHA1(ec4f61a526b707a7faec4653b773beb3bf3a17ba) )
+
+	ROM_REGION( 0x4000000, "sprites", 0 )
+	ROM_LOAD32_WORD( "269hw04-c1a.c1", 0x0000000, 0x1000000, CRC(a996e128) SHA1(dac542f2c182d0ac0bcf8211054605e181215038) )
+	ROM_LOAD32_WORD( "269hw04-c2a.c2", 0x0000002, 0x1000000, CRC(896056a4) SHA1(eb85bd6b18db811f35ed24bedbae5d6dcdf0f29e) )
+	ROM_LOAD32_WORD( "269hw04-c3a.c3", 0x2000000, 0x1000000, CRC(b6d2c0d9) SHA1(18e8b4b585b745ebbb774e0d657d5c9eb228128c) )
+	ROM_LOAD32_WORD( "269hw04-c4a.c4", 0x2000002, 0x1000000, CRC(fd2450b1) SHA1(038dc34d9a33b7e3de83879edf4e91273bf5bbc4) )
+ROM_END
+
+ROM_START( svcpcbas05 )
+	ROM_REGION( 0x800000, "maincpu", 0 )
+	ROM_LOAD32_WORD_SWAP( "269esv.p1", 0x000000, 0x400000, CRC(c6fd0131) SHA1(25439e469d0403439fde5d6532081a9b405bf642) )
+	ROM_LOAD32_WORD_SWAP( "269s06.p2", 0x000002, 0x400000, CRC(4847e283) SHA1(3e8f5d2ad0a628fb41771d5b4c67b82ea78fb878) )
+
+	ROM_REGION( 0x80000, "fixed", 0 ) /* larger char set */
+	ROM_FILL( 0x000000, 0x80000, 0x000000 )
+	ROM_REGION( 0x20000, "fixedbios", 0 )
+	ROM_LOAD( "sfix.sfix", 0x000000, 0x20000, CRC(c2ea0cfd) SHA1(fd4a618cdcdbf849374f0a50dd8efe9dbab706c3) )
+
+	ROM_REGION16_BE( 0x80000, "mainbios", 0 )
+	ROM_LOAD16_WORD_SWAP( "sp-4x.sp1", 0x00000, 0x80000, CRC(b4590283) SHA1(47047ed5b6062babc0a0bebcc30e4b3f021e115a) )
+
+	ROM_Y_ZOOM
+
+	ROM_REGION( 0x80000, "audiocrypt", 0 )
+	ROM_LOAD( "269.m1", 0x00000, 0x80000, CRC(f6819d00) SHA1(d3bbe09df502464f104e53501708ac6e2c1832c6) )
+	ROM_REGION( 0x90000, "audiocpu", ROMREGION_ERASEFF )
+
+	ROM_REGION( 0x1000000, "ymsnd", 0 )
+	ROM_LOAD( "269-v1a.v1", 0x000000, 0x1000000, CRC(a6af4753) SHA1(ec4f61a526b707a7faec4653b773beb3bf3a17ba) )
+
+	ROM_REGION( 0x4000000, "sprites", 0 )
+	ROM_LOAD32_WORD( "269hw05-c1a.c1", 0x0000000, 0x1000000, CRC(240b3196) SHA1(0665347f826c3dda8b35d0425a21e5ee35f0cbc9) )
+	ROM_LOAD32_WORD( "269hw05-c2a.c2", 0x0000002, 0x1000000, CRC(3b2a8b8b) SHA1(a7a0918752d94c421502d13ba9a1adbedbfa8152) )
+	ROM_LOAD32_WORD( "269hw05-c3a.c3", 0x2000000, 0x1000000, CRC(c05e5d4a) SHA1(e668c54c63fbf002a0a379762226b9610d553a23) )
+	ROM_LOAD32_WORD( "269hw05-c4a.c4", 0x2000002, 0x1000000, CRC(2509910c) SHA1(f2bc7c909c44c4f1ce6cce1c6f4aa7fd6ecda1b2) )
+ROM_END
+
+GAME( 200?, svcpcbs01,      svcpcb,   neopcb,    dualbios,  neopcb_state,  init_svcpcb, ROT0,  "Jason[FGCH]",    "SvC Chaos (Remix Ultra V1.2)(JAMMA PCB, set 1)", MACHINE_SUPPORTS_SAVE )
+GAME( 200?, svcpcbs03,      svcpcb,   neopcb,    dualbios,  neopcb_state,  init_svcpcb, ROT0,  "wesker[FGCH]",    "SvC Chaos (Unlock One-Time Limitation And Energy Limitation For Exceed Moves Alt 01)(JAMMA PCB, set 1)", MACHINE_SUPPORTS_SAVE )
+GAME( 200?, svcpcbs04,      svcpcb,   neopcb,    dualbios,  neopcb_state,  init_svcpcb, ROT0,  "Jason[FGCH]",    "SvC Chaos (Enable All Hidden Characters V1)(JAMMA PCB, set 1)", MACHINE_SUPPORTS_SAVE )
+GAME( 200?, svcpcbs05,      svcpcb,   neopcb,    dualbios,  neopcb_state,  init_svcpcb, ROT0,  "Dodowang[EGCG]",    "SvC Chaos (Enable All Hidden Characters V2)(JAMMA PCB, set 1)", MACHINE_SUPPORTS_SAVE )
+GAME( 200?, svcpcbs08,      svcpcb,   neopcb,    dualbios,  neopcb_state,  init_svcpcb, ROT0,  "wesker[FGCH]",    "SvC Chaos (Get Maximum Power On A Valid Attack Or Being Attacked Or Super Moves)(JAMMA PCB, set 1)", MACHINE_SUPPORTS_SAVE )
+GAME( 200?, svcpcbs09,      svcpcb,   neopcb,    dualbios,  neopcb_state,  init_svcpcb, ROT0,  "wesker[FGCH]",    "SvC Chaos (Iori's Chi No Bousou)(JAMMA PCB, set 1)", MACHINE_SUPPORTS_SAVE )
+GAME( 200?, svcpcbs10,      svcpcb,   neopcb,    dualbios,  neopcb_state,  init_svcpcb, ROT0,  "wesker[FGCH]",    "SvC Chaos (Iori's Saika)(JAMMA PCB, set 1)", MACHINE_SUPPORTS_SAVE )
+GAME( 200?, svcpcbas01,     svcpcb,   neopcb,    dualbios,  neopcb_state,  init_svcpcb, ROT0,  "Dodowang[EGCG]",    "SvC Chaos (Enable Hidden Characters V1)(JAMMA PCB, set 2)" , MACHINE_SUPPORTS_SAVE )
+GAME( 200?, svcpcbas02,     svcpcb,   neopcb,    dualbios,  neopcb_state,  init_svcpcb, ROT0,  "siromezm",    "SvC Chaos (Enable Hidden Characters V2)(JAMMA PCB, set 2)" , MACHINE_SUPPORTS_SAVE )
+GAME( 200?, svcpcbas04,     svcpcb,   neopcb,    dualbios,  neopcb_state,  init_svcpcb, ROT0,  "oak2003",    "SvC Chaos (Opactiy)(JAMMA PCB, set 2)" , MACHINE_SUPPORTS_SAVE )
+GAME( 200?, svcpcbas05,     svcpcb,   neopcb,    dualbios,  neopcb_state,  init_svcpcb, ROT0,  "siromezm",    "SvC Chaos (Hidden Characters-Replace Athena's portrait)(JAMMA PCB, set 2)" , MACHINE_SUPPORTS_SAVE )
