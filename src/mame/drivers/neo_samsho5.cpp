@@ -895,7 +895,7 @@ GAME( 2003, ss50sp,    samsh5sp,  neobase_ek, neo_ek, mvs_led_state, empty_init,
 
 GAME( 2004, samsh5sphc, samsh5sp, neobase_ek, neo_ek, mvs_led_state, empty_init, ROT0, "Wesker", "Samurai Shodown V Special (Final set 3 hack by Wesker)", MACHINE_SUPPORTS_SAVE )
 GAME( 2008, samsh5spnzk,samsh5sp, neobase_ek, neo_ek, mvs_led_state, empty_init, ROT0, "Zuojie", "Samurai Shodown V Special (Hack by Zuojie, Kof1996 2008-10-23)", MACHINE_SUPPORTS_SAVE )
-GAME( 2004, samsh5sp09, samsh5sp, samsh5sp,   neo_ek, mvs_led_state, empty_init, ROT0, "Robert", "Samurai Shodown V Special (Easy Command)", MACHINE_SUPPORTS_SAVE )
+GAME( 2004, samsh5sp09, samsh5sp, samsh5sp,   neo_ek, mvs_led_state, empty_init, ROT0, "Robert", "Samurai Shodown V Special (Easy Command 1)", MACHINE_SUPPORTS_SAVE )
 GAME( 2004, samsh5sp10, samsh5sp, samsh5sp,   neo_ek, mvs_led_state, empty_init, ROT0, "wesker", "Samurai Shodown V Special (Easy Nanatsu No Tachi)", MACHINE_SUPPORTS_SAVE )
 GAME( 2004, samsh5sp21, samsh5sp, samsh5sp,   neo_ek, mvs_led_state, empty_init, ROT0, "DDJ", 	 "Samurai Shodown V Special (Easy Move)", MACHINE_SUPPORTS_SAVE )
-GAME( 2004, samsh5spe,  samsh5sp, samsh5sp,   neo_ek, mvs_led_state, empty_init, ROT0, "hack", 	 "Samurai Shodown V Special (Easy Command)", MACHINE_SUPPORTS_SAVE )
+GAME( 2004, samsh5spe,  samsh5sp, samsh5sp,   neo_ek, mvs_led_state, empty_init, ROT0, "hack", 	 "Samurai Shodown V Special (Easy Command 2)", MACHINE_SUPPORTS_SAVE )

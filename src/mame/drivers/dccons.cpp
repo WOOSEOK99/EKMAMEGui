@@ -278,7 +278,7 @@
 
 #define CPU_CLOCK (200000000)
 
-READ64_MEMBER(dc_cons_state::dcus_idle_skip_r )
+uint64_t dc_cons_state::dcus_idle_skip_r()
 {
 	//if (m_maincpu->pc()==0xc0ba52a)
 	//  m_maincpu->spin_until_time(attotime::from_usec(2500));
@@ -287,7 +287,7 @@ READ64_MEMBER(dc_cons_state::dcus_idle_skip_r )
 	return dc_ram[0x2303b0/8];
 }
 
-READ64_MEMBER(dc_cons_state::dcjp_idle_skip_r )
+uint64_t dc_cons_state::dcjp_idle_skip_r()
 {
 	//if (m_maincpu->pc()==0xc0bac62)
 	//  m_maincpu->spin_until_time(attotime::from_usec(2500));
@@ -306,14 +306,14 @@ void dc_cons_state::init_dc()
 
 void dc_cons_state::init_dcus()
 {
-	m_maincpu->space(AS_PROGRAM).install_read_handler(0xc2303b0, 0xc2303b7, read64_delegate(*this, FUNC(dc_cons_state::dcus_idle_skip_r)));
+	m_maincpu->space(AS_PROGRAM).install_read_handler(0xc2303b0, 0xc2303b7, read64smo_delegate(*this, FUNC(dc_cons_state::dcus_idle_skip_r)));
 
 	init_dc();
 }
 
 void dc_cons_state::init_dcjp()
 {
-	m_maincpu->space(AS_PROGRAM).install_read_handler(0xc2302f8, 0xc2302ff, read64_delegate(*this, FUNC(dc_cons_state::dcjp_idle_skip_r)));
+	m_maincpu->space(AS_PROGRAM).install_read_handler(0xc2302f8, 0xc2302ff, read64smo_delegate(*this, FUNC(dc_cons_state::dcjp_idle_skip_r)));
 
 	init_dc();
 }
@@ -330,7 +330,7 @@ void dc_cons_state::init_tream()
 	init_dcus();
 }
 
-READ64_MEMBER(dc_cons_state::dc_pdtra_r )
+uint64_t dc_cons_state::dc_pdtra_r()
 {
 	uint64_t out = PCTRA<<32;
 
@@ -360,18 +360,18 @@ READ64_MEMBER(dc_cons_state::dc_pdtra_r )
 	return out;
 }
 
-WRITE64_MEMBER(dc_cons_state::dc_pdtra_w )
+void dc_cons_state::dc_pdtra_w(uint64_t data)
 {
 	PCTRA = (data>>16) & 0xffff;
 	PDTRA = (data & 0xffff);
 }
 
-READ8_MEMBER(dc_cons_state::dc_flash_r)
+uint8_t dc_cons_state::dc_flash_r(offs_t offset)
 {
 	return m_dcflash->read(offset+0x20000);
 }
 
-WRITE8_MEMBER(dc_cons_state::dc_flash_w)
+void dc_cons_state::dc_flash_w(offs_t offset, uint8_t data)
 {
 	m_dcflash->write(offset+0x20000,data);
 }
@@ -881,11 +881,12 @@ Consists of HKS-0300 main unit and HKS-0100 LCD with touch screen
   HDR-0095 673-01??? Fish Life Episode 1 Basic Edition
   HDR-0096 673-01??? Fish Life Episode 2 Basic Edition
   HDR-0097 673-01??? Fish Life Episode 3 Basic Edition
+  MSD-0001 ???-????? Fish Life Red Sea & Amazon PDP Ver.
  * denotes these games are archived.
 
  Machines high likely based on Fish Life:
-  «¿«Ã«ÁªÇª¢ª½ªÜ£¡ / Play with a touch! (2001) - touch screen cabinet for McDonald's Japan https://www.famitsu.com/game/news/2001/09/13/103,1000362656,1276,0,0.html
-  «¿«Ã«ÁªÇ«İ«ó£¡ / Pong by touch! (2001) - sushi ordering system https://web.archive.org/web/20180421214402/sega.jp/fb/creators/vol_13/1.html
+  ã‚¿ãƒƒãƒã§ã‚ãã¼ï¼ / Play with a touch! (2001) - touch screen cabinet for McDonald's Japan https://www.famitsu.com/game/news/2001/09/13/103,1000362656,1276,0,0.html
+  ã‚¿ãƒƒãƒã§ãƒãƒ³ï¼ / Pong by touch! (2001) - sushi ordering system https://web.archive.org/web/20180421214402/sega.jp/fb/creators/vol_13/1.html
 
  notes:
   Some sources claims Playful and Basic editions hardware is not the same, has to be verified.

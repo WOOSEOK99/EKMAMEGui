@@ -1525,7 +1525,7 @@ ROM_END
 
 GAME( 1992, mk,       0,       tunit_adpcm, mk, midtunit_state,       init_mktunit,  ROT0, "Midway",   "Mortal Kombat (rev 5.0 T-Unit 03/19/93)", MACHINE_SUPPORTS_SAVE )
 GAME( 1992, mkr4,     mk,      tunit_adpcm, mk, midtunit_state,       init_mktunit,  ROT0, "Midway",   "Mortal Kombat (rev 4.0 T-Unit 02/11/93)", MACHINE_SUPPORTS_SAVE )
-GAME( 1992, mktturbo,  mk,     tunit_adpcm, mk, midtunit_state,       init_mkturbo,  ROT0, "hack",     "Mortal Kombat (Turbo Ninja T-Unit 03/19/93, hack)", MACHINE_SUPPORTS_SAVE )
+GAME( 1992, mktturbo,  mk,     tunit_adpcm, mk, midtunit_state,       init_mkturbo,  ROT0, "hack",     "Mortal Kombat hack (Turbo Ninja T-Unit 03/19/93, hack)", MACHINE_SUPPORTS_SAVE )
 
 GAME( 1993, mk2,      0,       tunit_dcs,   mk2, midtunit_state,      init_mk2,      ROT0, "Midway",   "Mortal Kombat II (rev L3.1)", MACHINE_SUPPORTS_SAVE )
 GAME( 1993, mk2r32e,  mk2,     tunit_dcs,   mk2, midtunit_state,      init_mk2,      ROT0, "Midway",   "Mortal Kombat II (rev L3.2 (European))", MACHINE_SUPPORTS_SAVE )

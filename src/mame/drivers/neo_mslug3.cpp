@@ -1120,6 +1120,7 @@ GAME( 2018, ms6sre6px03,    mslug3,   ms6s16,		neo_Cs,    mvs_led_state, empty_i
 
 GAME( 2013, mslug3eb,  		mslug3,   mslug3,		neo_Ws,    mvs_led_state, empty_init,   ROT0, "PlayerX China", "Metal Slug 3 (Green Edition 2013-02-27)" , MACHINE_SUPPORTS_SAVE )
 GAME( 2000, mslug3h06,      mslug3,   mslug3h, 		neo_Ws,    mvs_led_state, empty_init,   ROT0, "PlayerX China", "Metal Slug 3 (Green Blue)", MACHINE_SUPPORTS_SAVE )
+GAME( 2020, mslug3h07,      mslug3,   mslug3h,   	neo_mslug, mvs_led_state, empty_init,   ROT0, "hack",    "Metal Slug 3 (Burst Enhanced Edition 2020-03-17)", MACHINE_SUPPORTS_SAVE )
 GAME( 2000, mslug3h37,      mslug3,   mslug3h, 		neo_Ws,    mvs_led_state, empty_init,   ROT0, "PlayerX China", "Metal Slug 3 (Out Of Blue)" , MACHINE_NOT_WORKING | MACHINE_IMPERFECT_GRAPHICS | MACHINE_SUPPORTS_SAVE )
 GAME( 2019, mslug3h65,      mslug3,   cmc42sfix_ek,	neo_Ws,    mvs_led_state, empty_init,   ROT0, "PlayerX China", "Metal Slug 3 (Enemies Resetting Green Blue Version 2019-07-20)" , MACHINE_SUPPORTS_SAVE )
 
@@ -1143,4 +1144,3 @@ GAME( 2019, mslug3rme12,    mslug3,   mslug3h,   	neo_mslug,   mvs_led_state, em
 GAME( 2019, mslug3rmf12,    mslug3,   mslug3h,   	neo_Tc,    	 mvs_led_state, empty_init,   ROT0, "Team Remix",    "Metal Slug 3 (Enemies Resetting Summon Slug Edition 2019-07-20)(Revised Version Big Heavy Machine Gun Extreme Mix 2.2 [2019-09-13])" , MACHINE_SUPPORTS_SAVE )
 GAME( 2019, mslug3hs,	    mslug3,   mslug3h,   	neo_mslug,   mvs_led_state, empty_init,   ROT0, "hack",    "Metal Slug 3 (Very Fast Shoot)" , MACHINE_SUPPORTS_SAVE )
 
-GAME( 2020, mslug3h07,      mslug3,   mslug3h,   	neo_mslug,   mvs_led_state, empty_init,   ROT0, "hack",    "Metal Slug 3 (Burst Enhanced Edition 2020-03-17)", MACHINE_SUPPORTS_SAVE )

@@ -1241,9 +1241,9 @@ GAME( 2009, jojobbss,  jojobanc,   jojoba,   cps3_jojo, cps3_hbmame, init_jojoba
 GAME( 2009, jojobpow,  jojobanc,   jojoba,   cps3_jojo, cps3_hbmame, init_jojoban,   ROT0, "Pipi899", "JoJo's Bizarre Adventure (Infinite Power 2009-07-15)", 0 )
 GAME( 2009, jojonbss,  jojonc,     jojo,     cps3_jojo, cps3_hbmame, init_jojon,     ROT0, "Pipi899", "JoJo's Venture (Enable Hidden Characters V1 2009-07-09)", 0 )
 GAME( 2009, jojonpow,  jojonc,     jojo,     cps3_jojo, cps3_hbmame, init_jojon,     ROT0, "Pipi899", "JoJo's Venture (Infinite Power 2009-07-11)", 0 )
-GAME( 1998, jojoan,    jojonc,     jojo,     cps3_jojo, cps3_hbmame, init_jojon,     ROT0, "Capcom", "JoJo's Venture (Asia, 981202, NO CD)", 0 )
-GAME( 1996, redeartn,  0,          redeartn, cps3_ren,  cps3_hbmame, init_redearth,  ROT0, "Capcom", "Red Earth (Asia 961121, NO CD)", 0 )
-GAME( 1996, redeartno, redeartn,   redeartn, cps3_ren,  cps3_hbmame, init_redeartno, ROT0, "Capcom", "Red Earth (Asia 961121, NO CD/Old Set)", 0 )
+GAME( 1998, jojoan,    jojonc,     jojo,     cps3_jojo, cps3_hbmame, init_jojon,     ROT0, "hack", "JoJo's Venture hack (Asia, 981202, NO CD)", 0 )
+GAME( 1996, redeartn,  0,          redeartn, cps3_ren,  cps3_hbmame, init_redearth,  ROT0, "hack", "Red Earth (Asia 961121, NO CD)", 0 )
+GAME( 1996, redeartno, redeartn,   redeartn, cps3_ren,  cps3_hbmame, init_redeartno, ROT0, "hack", "Red Earth (Asia 961121, NO CD/Old Set)", 0 )
 GAME( 2009, redearex,  redeartn,   redeartn, cps3_ren,  cps3_hbmame, init_redeartno, ROT0, "Pipi899", "Red Earth (Ex Super Version 2009-09-08)", 0 )
 GAME( 2009, sfiiibhp,  sfiiinc,    sfiii,    cps3,      cps3_hbmame, init_sfiiin,    ROT0, "Pipi899", "Street Fighter III: New Generation (Enable Hidden Characters V1 2009-08-08)", 0 )
 GAME( 2009, sfiiipmp,  sfiiinc,    sfiii,    cps3,      cps3_hbmame, init_sfiiin,    ROT0, "Pipi899", "Street Fighter III: New Generation (Infinite Power 2009-07-06)", 0 )
@@ -2849,7 +2849,7 @@ GAME( 2009, jojos04,        jojobanc,   jojoba,      cps3_jojo,  cps3_hbmame,   
 GAME( 2009, jojos05,        jojobanc,   jojoba,      cps3_jojo,  cps3_hbmame,     init_jojoban,  ROT0,  "hack",    "JoJo's Bizarre Adventure (U.S.A 990913, NO CD)", 0 )
 GAME( 2018, jojos06,        jojobanc,   jojoba,      cps3_jojo,  cps3_state,      init_jojoba,   ROT0,  "hack",    "JoJo's Bizarre Adventure (Super Plus)", 0 )
 // Red Earth
-GAME( 1996, redeartns01,    redeartn,   redeartn,    cps3_ren,   cps3_hbmame,     init_redearth, ROT0,  "Capcom",  "Red Earth (Asia 961023, NO CD)", 0 )
+GAME( 1996, redeartns01,    redeartn,   redeartn,    cps3_ren,   cps3_hbmame,     init_redearth, ROT0,  "hack",  "Red Earth (Asia 961023, NO CD)", 0 )
 // Street Fighter III: New Generation
 GAME( 2016, sfiiins01,      sfiiinc,    sfiii,       cps3,       cps3_state,      init_sfiii,    ROT0,  "hack",    "Street Fighter III: New Generation (Simple Attack 2016-01-21)", 0 )
 // Street Fighter III 2nd Impact Giant Attack
@@ -2862,11 +2862,11 @@ GAME( 1999, sfiii3ns03,     sfiii3nc,   sfiii3,      cps3,       cps3_state,    
 GAME( 2014, sfiii3ns05,     sfiii3nc,   sfiii3,      cps3,       cps3_state,      init_sfiii3,   ROT0,  "pipi899", "Street Fighter III 3rd Strike: Fight for the Future (Hits the third time 2014-11-20)", 0 )
 GAME( 2015, sfiii3ns06,     sfiii3nc,   sfiii3,      cps3,       cps3_state,      init_sfiii3,   ROT0,  "hack",    "Street Fighter III 3rd Strike: Fight for the Future (Boss With Simple Attack Edition 2015-12-16)", 0 )
 GAME( 2015, sfiii3ns07,     sfiii3nc,   sfiii3,      cps3,       cps3_state,      init_sfiii3,   ROT0,  "hack",    "Street Fighter III 3rd Strike: Fight for the Future (4rd Arrange Edition 2013 Simplified 2014-11-16)", 0 )
-GAME( 1999, sfiii3ns08,     sfiii3nc,   sfiii3,      cps3,       cps3_state,      init_sfiii3,   ROT0,  "Capcom",  "Street Fighter III 3rd Strike: Fight for the Future (Asia 990608, NO CD)", 0 )
-GAME( 1999, sfiii3ns09,     sfiii3nc,   sfiii3,      cps3,       cps3_state,      init_sfiii3,   ROT0,  "Capcom",  "Street Fighter III 3rd Strike: Fight for the Future (Brazil 990608, NO CD)", 0 )
-GAME( 1999, sfiii3ns10,     sfiii3nc,   sfiii3,      cps3,       cps3_state,      init_sfiii3,   ROT0,  "Capcom",  "Street Fighter III 3rd Strike: Fight for the Future (Euro 990608, NO CD)", 0 )
-GAME( 1999, sfiii3ns11,     sfiii3nc,   sfiii3,      cps3,       cps3_state,      init_sfiii3,   ROT0,  "Capcom",  "Street Fighter III 3rd Strike: Fight for the Future (Oceania 990608, NO CD)", 0 )
-GAME( 1999, sfiii3ns12,     sfiii3nc,   sfiii3,      cps3,       cps3_state,      init_sfiii3,   ROT0,  "Capcom",  "Street Fighter III 3rd Strike: Fight for the Future (USA 990608, NO CD)", 0 )
+GAME( 1999, sfiii3ns08,     sfiii3nc,   sfiii3,      cps3,       cps3_state,      init_sfiii3,   ROT0,  "hack",  "Street Fighter III 3rd Strike: Fight for the Future (Asia 990608, NO CD)", 0 )
+GAME( 1999, sfiii3ns09,     sfiii3nc,   sfiii3,      cps3,       cps3_state,      init_sfiii3,   ROT0,  "hack",  "Street Fighter III 3rd Strike: Fight for the Future (Brazil 990608, NO CD)", 0 )
+GAME( 1999, sfiii3ns10,     sfiii3nc,   sfiii3,      cps3,       cps3_state,      init_sfiii3,   ROT0,  "hack",  "Street Fighter III 3rd Strike: Fight for the Future (Euro 990608, NO CD)", 0 )
+GAME( 1999, sfiii3ns11,     sfiii3nc,   sfiii3,      cps3,       cps3_state,      init_sfiii3,   ROT0,  "hack",  "Street Fighter III 3rd Strike: Fight for the Future (Oceania 990608, NO CD)", 0 )
+GAME( 1999, sfiii3ns12,     sfiii3nc,   sfiii3,      cps3,       cps3_state,      init_sfiii3,   ROT0,  "hack",  "Street Fighter III 3rd Strike: Fight for the Future (USA 990608, NO CD)", 0 )
 
  /*********************************
  Don't require the CD image to boot
@@ -3230,10 +3230,10 @@ ROM_START( jojonc ) //Name of the official roms in mame (jojon)
 ROM_END
 
 /* NO CD sets - use NO CD BIOS roms - don't require the CD image to boot */
-GAME( 1997, sfiiinc,       0,    sfiii,    cps3,      cps3_state, init_sfiii,    ROT0, "Capcom", "Street Fighter III: New Generation (Asia 970204, NO CD)", 0 )
-GAMEL(1997, sfiii2nc,      0,    sfiii2,   cps3,      cps3_state, init_sfiii2,   ROT0, "Capcom", "Street Fighter III 2nd Impact: Giant Attack (Asia 970930, NO CD)", 0, layout_sfiii2 )
-GAME( 1999, sfiii3nc,      0,    sfiii3,   cps3,      cps3_state, init_sfiii3,   ROT0, "Capcom", "Street Fighter III 3rd Strike: Fight for the Future (Japan 990608, NO CD)", 0 )
-GAME( 1999, jojobanc,      0,    jojoba,   cps3_jojo, cps3_state, init_jojoba,   ROT0, "Capcom", "JoJo no Kimyou na Bouken: Mirai e no Isan (Japan 990927, NO CD hack)", 0 )
-GAME( 1998, jojonc,        0,    jojo,     cps3_jojo, cps3_state, init_jojo,     ROT0, "Capcom", "JoJo's Venture (Asia 990128, NO CD)", 0 )
+GAME( 1997, sfiiinc,       0,    sfiii,    cps3,      cps3_state, init_sfiii,    ROT0, "hack", "Street Fighter III: New Generation (Asia 970204, NO CD)", 0 )
+GAMEL(1997, sfiii2nc,      0,    sfiii2,   cps3,      cps3_state, init_sfiii2,   ROT0, "hack", "Street Fighter III 2nd Impact: Giant Attack hack (Asia 970930, NO CD)", 0, layout_sfiii2 )
+GAME( 1999, sfiii3nc,      0,    sfiii3,   cps3,      cps3_state, init_sfiii3,   ROT0, "hack", "Street Fighter III 3rd Strike: Fight for the Future hack (Japan 990608, NO CD)", 0 )
+GAME( 1999, jojobanc,      0,    jojoba,   cps3_jojo, cps3_state, init_jojoba,   ROT0, "hack", "JoJo no Kimyou na Bouken: Mirai e no Isan (Japan 990927, NO CD hack)", 0 )
+GAME( 1998, jojonc,        0,    jojo,     cps3_jojo, cps3_state, init_jojo,     ROT0, "hack", "JoJo's Venture (Asia 990128, NO CD)", 0 )
 
 

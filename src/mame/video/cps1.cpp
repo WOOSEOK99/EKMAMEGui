@@ -500,7 +500,7 @@ The games seem to use them to mark platforms, kill zones and no-go areas.
 #define CPS_B_21_QS5 0x1e,0x0c02,  -1,  -1,  -1,  -1,  0x0c, -1,  -1,   0x2a,{0x2c,0x2e,0x30,0x32},0x1c, {0x04,0x08,0x10,0x00,0x00}
 #define HACK_B_1      -1,   -1,    -1,  -1,  -1,  -1,   -1,  -1,  -1,   0x14,{0x12,0x10,0x0e,0x0c},0x0a, {0x0e,0x0e,0x0e,0x30,0x30}
 #define HACK_B_2      -1,   -1,   0x0e,0x0c,0x0a,0x08, 0x06,0x04,0x02,  0x28,{0x26,0x24,0x22,0x20},0x22, {0x20,0x04,0x08,0x12,0x12}
-
+#define HACK_B_3     0x20,0x0004,          __not_applicable__,          0x30,{0x26, -1, 0x28,0x32},0x2a, {0x02,0x04,0x08,0x00,0x00} // varthb2, writes to priority mask 2 have been patched out
 // HBMAME extras
 
 #define HACK_H_2      -1,   -1,    -1,  -1,  -1,  -1,   -1,  -1,  -1,   0x20,{ -1,  -1,  -1,  -1 },0x2a, {0x02,0x02,0x02,0x00,0x00} // wofh etc
@@ -1865,7 +1865,7 @@ static const struct CPS1config cps1_config_table[]=
 	{"sf2b",        CPS_B_17,     mapper_STF29,  0x36, 0, 0, 1 },
 	{"sf2b2",       CPS_B_17,     mapper_STF29,  0x36, 0, 0, 1 },
 	{"sf2ceupl",    HACK_B_1,     mapper_S9263B, 0x36, 0, 0, 1 },
-	{"sf2rules",    HACK_B_1,     mapper_S9263B, 0x36, 0, 0, 2 },
+	{"sf2rules",    HACK_B_1,     mapper_S9263B, 0x36, 0, 0, 1 },
 	{"sf2ceds6",    HACK_B_1,     mapper_S9263B, 0,    0, 0, 2 },
 	{"sf2cems6a",   HACK_B_1,     mapper_S9263B, 0,    0, 0, 2 },
 	{"sf2cems6b",   HACK_B_1,     mapper_S9263B, 0,    0, 0, 2 },
@@ -1873,6 +1873,7 @@ static const struct CPS1config cps1_config_table[]=
 	{"sf2re",       HACK_B_1,     mapper_S9263B, 0,    0, 0, 2 },
 	{"varth",       CPS_B_04,     mapper_VA24B },   /* CPSB test has been patched out (60=0008) register is also written to, possibly leftover from development */
 	{"varthb",      CPS_B_04,     mapper_VA63B, 0, 0, 0, 0x0F },
+	{"varthb2",     HACK_B_3,     mapper_sfzch, 0, 0, 0, 0x80 },  // unknown gal, other varth mappers don't work (game looks for sprites in >0x8000 unmapped region)
 	{"varthr1",     CPS_B_04,     mapper_VA24B },   /* CPSB test has been patched out (60=0008) register is also written to, possibly leftover from development */
 	{"varthu",      CPS_B_04,     mapper_VA63B },   /* CPSB test has been patched out (60=0008) register is also written to, possibly leftover from development */
 	{"varthj",      CPS_B_21_BT5, mapper_VA22B },   /* CPSB test has been patched out (72=0001) register is also written to, possibly leftover from development */
@@ -1984,10 +1985,11 @@ static const struct CPS1config cps1_config_table[]=
 	{"dinorp",      CPS_B_21_QS2, mapper_CD63B },							//works
 	{"dinoslice",   CPS_B_21_QS2, mapper_CD63B },							//works
 	{"dinouphp",    CPS_B_21_QS2, mapper_CD63B },							//works
-	{"dinoz",       CPS_B_21_QS2, mapper_CD63B },							//works
+	{"dinoz",       CPS_B_21_QS2, mapper_PS63B },							//works
+
 	{"knight21",    CPS_B_21_BT4, mapper_KR63B, 0x36, 0, 0x34 },			//works
 	//{"knightsa",    CPS_B_21_BT4, mapper_KR63B, 0x36, 0, 0x34 },			// a rom is unobtainable
-	{"knightsb2",   HACK_H_6,     mapper_KR63B, 0x36, 0, 0x34, 0x44 }, 		//works
+	{"knightshb2",  HACK_H_6,     mapper_KR63B, 0x36, 0, 0x34, 0x44 }, 		//works
 	{"knightsh",    CPS_B_21_DEF, mapper_KR63B, 0x36, 0, 0x34 },			//works (intro screen is crap)
 	{"knightsha",   HACK_H_7,     mapper_KR63B, 0x36, 0, 0x34 },			//works
 	{"knightsjb",   CPS_B_21_DEF, mapper_KR63B, 0x36, 0, 0x34 },			//works
@@ -2202,8 +2204,13 @@ static const struct CPS1config cps1_config_table[]=
 	{"captcomms86", CPS_B_21_BT3, mapper_CC63B,  0x36, 0x38, 0x34 },
 	{"captcomms87", CPS_B_21_BT3, mapper_CC63B,  0x36, 0x38, 0x34 },
 	{"captcomms88", CPS_B_21_BT3, mapper_CC63B,  0x36, 0x38, 0x34 },
+	{"captcomms89", CPS_B_21_BT3, mapper_CC63B,  0x36, 0x38, 0x34 },
+	{"captcomms90", CPS_B_21_BT3, mapper_CC63B,  0x36, 0x38, 0x34 },
+	{"captcomms91", CPS_B_21_BT3, mapper_CC63B,  0x36, 0x38, 0x34 },
+	{"captcomms92", CPS_B_21_BT3, mapper_CC63B,  0x36, 0x38, 0x34 },
 
-	{"dinofr",		CPS_B_21_QS2, mapper_CD63B },	
+	{"dinofr",			CPS_B_21_QS2, mapper_CD63B },	
+	{"dinofr2",			CPS_B_21_QS2, mapper_CD63B },	
 	{"dinosek1",		CPS_B_21_QS2, mapper_CD63B },		
 	{"dinos21",			CPS_B_21_QS2, mapper_CD63B },	
 	{"dinos23",			CPS_B_21_QS2, mapper_CD63B },
@@ -2433,6 +2440,21 @@ static const struct CPS1config cps1_config_table[]=
     {"dinos238",   		CPS_B_21_QS2, mapper_CD63B },
     {"dinos239",   		CPS_B_21_QS2, mapper_CD63B },
     {"dinos240",   		CPS_B_21_QS2, mapper_CD63B },
+	{"dinos241",		CPS_B_21_QS2, mapper_CD63B },
+	{"dinos242",		CPS_B_21_QS2, mapper_CD63B },
+	{"dinos243",		CPS_B_21_QS2, mapper_CD63B },
+	{"dinos244",		CPS_B_21_QS2, mapper_CD63B },
+	{"dinos245",		CPS_B_21_QS2, mapper_CD63B },
+	{"dinos246",		CPS_B_21_QS2, mapper_CD63B },
+	{"dinos247",		CPS_B_21_QS2, mapper_CD63B },
+	{"dinos248",		CPS_B_21_QS2, mapper_CD63B },
+	{"dinos249",		CPS_B_21_QS2, mapper_CD63B },
+	{"dinos250",		CPS_B_21_QS2, mapper_CD63B },
+	{"dinos251",		CPS_B_21_QS2, mapper_CD63B },
+	{"dinos252",		CPS_B_21_QS2, mapper_CD63B },
+	{"dinos253",		CPS_B_21_QS2, mapper_CD63B },
+	{"dinos254",		CPS_B_21_QS2, mapper_CD63B },
+	{"dinos255",		CPS_B_21_QS2, mapper_CD63B },
 
 	{"ffightb",     	CPS_B_01,     mapper_S224B },							//works
 	{"ffightjh01",      CPS_B_02,     mapper_S224B },							//works
@@ -2455,12 +2477,15 @@ static const struct CPS1config cps1_config_table[]=
 	{"knightsh06",     CPS_B_21_BT4, mapper_KR63B,  0x36, 0, 0x34 },
 	{"knightsh07",     CPS_B_21_BT4, mapper_KR63B,  0x36, 0, 0x34 },
 	{"knightsh08",     CPS_B_21_BT4, mapper_KR63B,  0x36, 0, 0x34 },
-	{"knightsh09",     CPS_B_21_BT4, mapper_KR63B,  0x36, 0, 0x34 },
-	{"knightsh10",     CPS_B_21_BT4, mapper_KR63B,  0x36, 0, 0x34 },
-	{"knightsh11",     CPS_B_21_BT4, mapper_KR63B,  0x36, 0, 0x34 },
+	{"knightsh09",     CPS_B_21_DEF, mapper_KR63B,  0x36, 0, 0x34 },
+	{"knightsh10",     CPS_B_21_DEF, mapper_KR63B,  0x36, 0, 0x34 },
+	{"knightsh11",     CPS_B_21_DEF, mapper_KR63B,  0x36, 0, 0x34 },
 	{"knightsh12",     CPS_B_21_BT4, mapper_KR63B,  0x36, 0, 0x34 },
 	{"knightsh13",     CPS_B_21_BT4, mapper_KR63B,  0x36, 0, 0x34 },
 	{"knightsh14",     CPS_B_21_BT4, mapper_KR63B,  0x36, 0, 0x34 },
+	{"knightsh15",     CPS_B_21_BT4, mapper_KR63B,  0x36, 0, 0x34 },
+	{"knightsh16",     CPS_B_21_BT4, mapper_KR63B,  0x36, 0, 0x34 },
+	{"knightsh17",     CPS_B_21_BT4, mapper_KR63B,  0x36, 0, 0x34 },
 	{"knightsjs01",    CPS_B_21_BT4, mapper_KR63B,  0x36, 0, 0x34 },
 	{"mercs01",        CPS_B_12,     mapper_O224B,  0x36, 0, 0x34 },
 	{"mercjs01",       CPS_B_12,     mapper_O224B,  0x36, 0, 0x34 },
@@ -2493,6 +2518,8 @@ static const struct CPS1config cps1_config_table[]=
 	{"punisherjs17",    CPS_B_21_QS3, mapper_PS63B },
 	{"punisherjs18",    CPS_B_21_QS3, mapper_PS63B },
 	{"punisherjs19",    CPS_B_21_QS3, mapper_PS63B },
+	{"punisherjs20",    CPS_B_21_QS3, mapper_PS63B },
+	{"punisherjs21",    CPS_B_21_QS3, mapper_PS63B },
 	{"punisherbzs01",   CPS_B_21_QS3, mapper_PS63B }, 
 	{"sf2ces01",     CPS_B_21_DEF, mapper_S9263B, 0x36 },
 	{"sf2ces02",     CPS_B_21_DEF, mapper_S9263B, 0x36 },
@@ -2705,6 +2732,9 @@ static const struct CPS1config cps1_config_table[]=
 	{"tk2h156",        CPS_B_21_QS1, mapper_TK263B },
 	{"tk2h157",       CPS_B_21_DEF, mapper_TK263B },
 	{"tk2h158",       CPS_B_21_DEF, mapper_TK263B },
+	{"tk2h159",       CPS_B_21_DEF, mapper_TK263B },
+	{"tk2h160",       CPS_B_21_DEF, mapper_TK263B },
+	{"tk2h161",       CPS_B_21_DEF, mapper_TK263B },
 	{"tk2p02",       CPS_B_21_DEF, mapper_TK263B },
 	{"tk2p03",       CPS_B_21_DEF, mapper_TK263B },
 	{"tk2p04",       CPS_B_21_DEF, mapper_TK263B },
@@ -2751,6 +2781,7 @@ static const struct CPS1config cps1_config_table[]=
 	{"sk2h23",       CPS_B_21_DEF, mapper_TK263B },
 	{"sk2h41",       CPS_B_21_DEF, mapper_TK263B },
 	{"sk2h43",       CPS_B_21_DEF, mapper_TK263B },
+	{"sk2h44",       CPS_B_21_DEF, mapper_TK263B },
 	{"sk2h45",       CPS_B_21_DEF, mapper_TK263B },
 
 ///
@@ -3071,7 +3102,7 @@ inline uint16_t *cps_state::cps1_base( int offset, int boundary )
 
 
 
-WRITE16_MEMBER(cps_state::cps1_cps_a_w)
+void cps_state::cps1_cps_a_w(offs_t offset, uint16_t data, uint16_t mem_mask)
 {
 	data = COMBINE_DATA(&m_cps_a_regs[offset]);
 
@@ -3097,7 +3128,7 @@ WRITE16_MEMBER(cps_state::cps1_cps_a_w)
 }
 
 
-READ16_MEMBER(cps_state::cps1_cps_b_r)
+uint16_t cps_state::cps1_cps_b_r(offs_t offset)
 {
 	/* Some games interrogate a couple of registers on bootup. */
 	/* These are CPS1 board B self test checks. They wander from game to */
@@ -3141,7 +3172,7 @@ READ16_MEMBER(cps_state::cps1_cps_b_r)
 }
 
 
-WRITE16_MEMBER(cps_state::cps1_cps_b_w)
+void cps_state::cps1_cps_b_w(offs_t offset, uint16_t data, uint16_t mem_mask)
 {
 	data = COMBINE_DATA(&m_cps_b_regs[offset]);
 
@@ -3312,7 +3343,7 @@ void cps_state::cps1_get_video_base()
 	if (m_game_config->bootleg_kludge == 2)
 	{
 		m_cps_a_regs[CPS1_OBJ_BASE] = 0x9100;
-		scroll1xoff = -0x0c;
+		scroll1xoff = -0x10;
 		scroll2xoff = -0x10;
 		scroll3xoff = -0x10;
 	}
@@ -3322,6 +3353,13 @@ void cps_state::cps1_get_video_base()
 		scroll1xoff = -0x08;
 		scroll2xoff = -0x0b;
 		scroll3xoff = -0x0c;
+	}
+	else
+	if (m_game_config->bootleg_kludge == 0x80)
+	{
+		scroll1xoff = -0x0c;
+		scroll2xoff = -0x0e;
+		scroll3xoff = -0x10;
 	}
 	else
 	if (m_game_config->bootleg_kludge == 0x88) // 3wondersb
@@ -3400,7 +3438,7 @@ void cps_state::cps1_get_video_base()
 }
 
 
-WRITE16_MEMBER(cps_state::cps1_gfxram_w)
+void cps_state::cps1_gfxram_w(offs_t offset, uint16_t data, uint16_t mem_mask)
 {
 	int page = (offset >> 7) & 0x3c0;
 	COMBINE_DATA(&m_gfxram[offset]);
@@ -3814,7 +3852,7 @@ void cps_state::cps1_render_sprites( screen_device &screen, bitmap_ind16 &bitmap
 	uint16_t *base = m_buffered_obj.get();
 
 	/* some sf2 hacks draw the sprites in reverse order */
-	if ((m_game_config->bootleg_kludge == 1) || (m_game_config->bootleg_kludge == 2) || (m_game_config->bootleg_kludge == 3))
+	if ((m_game_config->bootleg_kludge == 1) || (m_game_config->bootleg_kludge == 2) || (m_game_config->bootleg_kludge == 3) || (m_game_config->bootleg_kludge == 0x80))
 	{
 		base += m_last_sprite_offset;
 		baseadd = -4;
@@ -3946,13 +3984,13 @@ void cps_state::cps1_render_sprites( screen_device &screen, bitmap_ind16 &bitmap
 
 
 
-WRITE16_MEMBER(cps2_state::cps2_objram_bank_w)
+void cps2_state::cps2_objram_bank_w(offs_t offset, uint16_t data, uint16_t mem_mask)
 {
 	if (ACCESSING_BITS_0_7)
 		m_objram_bank = data & 1;
 }
 
-READ16_MEMBER(cps2_state::cps2_objram1_r)
+uint16_t cps2_state::cps2_objram1_r(offs_t offset)
 {
 	if (m_objram_bank & 1)
 		return m_objram2[offset];
@@ -3960,7 +3998,7 @@ READ16_MEMBER(cps2_state::cps2_objram1_r)
 		return m_objram1[offset];
 }
 
-READ16_MEMBER(cps2_state::cps2_objram2_r)
+uint16_t cps2_state::cps2_objram2_r(offs_t offset)
 {
 	if (m_objram_bank & 1)
 		return m_objram1[offset];
@@ -3968,7 +4006,7 @@ READ16_MEMBER(cps2_state::cps2_objram2_r)
 		return m_objram2[offset];
 }
 
-WRITE16_MEMBER(cps2_state::cps2_objram1_w)
+void cps2_state::cps2_objram1_w(offs_t offset, uint16_t data, uint16_t mem_mask)
 {
 	if (m_objram_bank & 1)
 		COMBINE_DATA(&m_objram2[offset]);
@@ -3976,7 +4014,7 @@ WRITE16_MEMBER(cps2_state::cps2_objram1_w)
 		COMBINE_DATA(&m_objram1[offset]);
 }
 
-WRITE16_MEMBER(cps2_state::cps2_objram2_w)
+void cps2_state::cps2_objram2_w(offs_t offset, uint16_t data, uint16_t mem_mask)
 {
 	if (m_objram_bank & 1)
 		COMBINE_DATA(&m_objram1[offset]);

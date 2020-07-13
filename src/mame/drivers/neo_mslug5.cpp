@@ -1058,8 +1058,6 @@ GAME( 2015, mslug5dh34,  mslug5,   neo304h,   neogeo,    mvs_led_state, empty_in
 GAME( 2018, mslug5dh40,  mslug5,   neo304h,   neogeo,    mvs_led_state, empty_init, 	   ROT0, "hack", "Metal Slug 5 (Multi-Function Version 2017-05-23)", MACHINE_SUPPORTS_SAVE )
 GAME( 2019, mslug5dh50,  mslug5,   s1945p,    neogeo,    mvs_led_state, empty_init,     ROT0, "hack", "Metal Slug 5 (Enemies Resetting Multi-Function Version 2019-04-24)", MACHINE_SUPPORTS_SAVE )
 GAME( 2019, mslug5dh52,  mslug5,   neo304h,   neogeo,    mvs_led_state, empty_init,     ROT0, "hack", "Metal Slug 5 (Enemies Resetting Version 2019-03-07)", MACHINE_SUPPORTS_SAVE )
-
-
 GAME( 2019, mslug5dh53,    mslug5,   neo304h,  neogeo,    mvs_led_state, empty_init,   ROT0, "YouGuDuoLa", "Metal Slug 5 (Enemy Soldiers Enhanced Version 2019-02-12)", MACHINE_SUPPORTS_SAVE )
 GAME( 2018, mslug5dh60,    mslug5,   s1945p,   neogeo,    mvs_led_state, empty_init,   ROT0, "hack", "Metal Slug 5 (Shotgun Flash Off)", MACHINE_SUPPORTS_SAVE )
 GAME( 2019, mslug5dh62,    mslug5,   neo304h,  neogeo,    mvs_led_state, empty_init,   ROT0, "hack", "Metal Slug 5 (Enemy Soldiers Magic Version 2019-12-07)",  MACHINE_SUPPORTS_SAVE )

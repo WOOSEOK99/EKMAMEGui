@@ -157,6 +157,7 @@
 #define OPTION_OSLOG                "oslog"
 #define OPTION_UPDATEINPAUSE        "update_in_pause"
 #define OPTION_DEBUGSCRIPT          "debugscript"
+#define OPTION_DEBUGLOG             "debuglog"
 
 // core misc options
 #define OPTION_DRC                  "drc"
@@ -436,6 +437,7 @@ public:
 	bool oslog() const { return bool_value(OPTION_OSLOG); }
 	const char *debug_script() const { return value(OPTION_DEBUGSCRIPT); }
 	bool update_in_pause() const { return bool_value(OPTION_UPDATEINPAUSE); }
+	bool debuglog() const { return bool_value(OPTION_DEBUGLOG); }
 
 	// core misc options
 	bool drc() const { return bool_value(OPTION_DRC); }
